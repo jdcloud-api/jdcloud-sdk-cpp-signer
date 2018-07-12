@@ -1,0 +1,9 @@
+.idea
+cmake-build-debug
+CMakeFiles
+*.a
+*.cbp
+*.cmake
+Demo
+Makefile
+.DS_Store
