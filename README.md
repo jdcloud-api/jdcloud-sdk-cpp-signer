@@ -105,6 +105,14 @@ devenv Demo.sln /build
 
 ## 调用方法
 ```
+// 引用头文件
+#include "Credential.h"
+#include "JdcloudSigner.h"
+#include "http/HttpTypes.h"
+#include "http/HttpRequest.h"
+#include "util/logging/Logging.h"
+#include "util/logging/ConsoleLogSystem.h"
+
 // 配置日志
 ConsoleLogSystem* cls = new ConsoleLogSystem(LogLevel::Debug);
 shared_ptr<ConsoleLogSystem> log(cls);
