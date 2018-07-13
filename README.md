@@ -129,7 +129,13 @@ JdcloudSigner signer(credential, "vm", "cn-north-1");
 
 // 调用签名方法
 bool result = signer.SignRequest(request);
-
-// 把Header中的三项 "Authorization、x-jdcloud-date、x-jdcloud-nonce" 放到真正的请求头中
-// 向京东云网关发起HTTP请求
+if(result)
+{
+    // 把Header中的三项 "Authorization、x-jdcloud-date、x-jdcloud-nonce" 放到真正的请求头中
+    // 向京东云网关发起HTTP请求
+}
+else
+{
+    return;
+}
 ```
