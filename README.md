@@ -121,7 +121,7 @@ InitializeLogging(log);
 // 创建HttpRequest对象
 HttpRequest request(URI("YOUR URL"), HttpMethod::HTTP_GET);
 request.SetHeaderValue(CONTENT_TYPE_HEADER, "application/json");
-request.SetHeaderValue(USER_AGENT_HEADER, "JdcloudSdkGo/1.0.2 vm/0.7.4");
+request.SetHeaderValue(USER_AGENT_HEADER, "JdcloudSdkCpp/1.0.2 vm/0.7.4");
 
 // 创建签名对象
 Credential credential("YOUR AK", "YOUR SK");
