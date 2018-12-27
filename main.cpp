@@ -49,7 +49,7 @@ void TestRequestWithBody() {
     shared_ptr<ConsoleLogSystem> log(cls);
     InitializeLogging(log);
 
-    HttpRequest request(URI("http://www.jdcloud-api.com/v1/regions/cn-north-1/instances?pageNumber=2&pageSize=10"), HttpMethod::HTTP_GET);
+    HttpRequest request(URI("http://www.jdcloud-api.com/v1/regions/cn-north-1/instances"), HttpMethod::HTTP_POST);
     request.SetHeaderValue(CONTENT_TYPE_HEADER, "application/json");
     request.SetHeaderValue(USER_AGENT_HEADER, "JdcloudSdkGo/1.0.2 vm/0.7.4");
 
