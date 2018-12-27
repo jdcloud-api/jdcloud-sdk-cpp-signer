@@ -55,7 +55,8 @@ HashResult Sha256HMAC::Calculate(const string& toSign, const string& secret)
 
     HMAC_CTX_cleanup(m_ctx);
 
-    string result = HashingUtils::HexEncode(digest, length);;
+    string result((const char*) digest, length);
     free(digest);
+     
     return HashResult(result);
 }

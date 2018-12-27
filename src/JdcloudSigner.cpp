@@ -311,7 +311,8 @@ string JdcloudSigner::GenerateSignature(const string& stringToSign, const string
     }
 
     //now we finally sign our request string with our hex encoded derived hash.
-    auto finalSigningHash = hashResult.GetResult();
+    string result = hashResult.GetResult();
+    string finalSigningHash = HashingUtils::HexEncode((unsigned char*)result.c_str(), result.length());
     LOGSTREAM_DEBUG(logTag, "Final computed signing hash: " << finalSigningHash);
 
     return finalSigningHash;
