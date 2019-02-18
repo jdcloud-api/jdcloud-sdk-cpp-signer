@@ -2,6 +2,24 @@
 
 [![Build Status](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer.svg?branch=master)](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [基本说明](#%E5%9F%BA%E6%9C%AC%E8%AF%B4%E6%98%8E)
+- [Linux（Ubuntu）](#linuxubuntu)
+  - [安装方法](#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95)
+  - [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
+- [macOS](#macos)
+  - [安装方法](#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-1)
+  - [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-1)
+- [Windows](#windows)
+  - [安装方法](#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-2)
+  - [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-2)
+- [调用方法](#%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 基本说明
 京东云C++签名工具提供了C++语言访问京东云OpenAPI时的请求签名功能，它以AccessKey和SecretKey为素材，将HTTP请求的相关信息经过多次处理，再加上时间和nonce随机值对请求进行签名。使用本签名工具可以节省您编写签名过程的时间，没有正确签名，有可能会造成无法正常访问京东云OpenAPI。使用签名功能，可以保证您的身份不被冒充。请注意AK/SK的安全。
 
