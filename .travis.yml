@@ -15,3 +15,6 @@ addons:
   apt:
     packages:
     - cmake
+cache:
+  directories:
+    - /usr/local/Homebrew
