@@ -1,0 +1,11 @@
+language: cpp
+compiler:
+  - gcc
+  - clang
+script: cmake . && make
+dist: trusty
+sudo: false
+addons:
+  apt:
+    packages:
+    - cmake
