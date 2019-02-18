@@ -8,3 +8,4 @@ Demo
 Makefile
 .DS_Store
 CMakeCache.txt
+install_manifest.txt

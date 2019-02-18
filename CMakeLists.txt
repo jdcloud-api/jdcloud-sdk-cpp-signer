@@ -23,6 +23,7 @@ include_directories(${PROJECT_SOURCE_DIR}/util)
 include_directories(${PROJECT_SOURCE_DIR}/util/crypto)
 include_directories(${PROJECT_SOURCE_DIR}/util/logging)
 add_subdirectory(src)
+add_subdirectory(h)
 
 set(CMAKE_BUILD_TYPE "Release")
 
