@@ -7,7 +7,7 @@ compiler:
   - clang
 before_install:
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew update'
-  - '[ "$TRAVIS_OS_NAME" != osx ] || brew install cmake'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || brew upgrade cmake'
 script: cmake . && make
 dist: trusty
 sudo: false
