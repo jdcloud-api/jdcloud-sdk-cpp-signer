@@ -20,6 +20,8 @@
 #include "Logging.h"
 #include "LogSystemInterface.h"
 
+namespace jdcloud_signer {
+
 // While macros are usually grotty, using them here lets us have a simple function call interface for logging that
 //
 //  (1) Can be compiled out completely, so you don't even have to pay the cost to check the log level (which will be a virtual function call and a std::atomic<> read) if you don't want any logging
@@ -116,3 +118,5 @@
         }
 
 #endif // DISABLE_LOGGING
+
+}

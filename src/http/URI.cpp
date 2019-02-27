@@ -26,6 +26,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 const char* SEPARATOR = "://";
 
 URI::URI() : m_scheme(Scheme::HTTP), m_port(HTTP_DEFAULT_PORT)
@@ -485,4 +487,6 @@ string URI::GetFormParameters() const
 bool URI::CompareURIParts(const URI& other) const
 {
     return m_scheme == other.m_scheme && m_authority == other.m_authority && m_path == other.m_path && m_queryString == other.m_queryString;
+}
+
 }

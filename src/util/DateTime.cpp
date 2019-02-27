@@ -22,6 +22,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 static const char* RFC822_DATE_FORMAT_STR_WITH_Z = "%a, %d %b %Y %H:%M:%S %Z";
 static const char* ISO_8601_LONG_DATE_FORMAT_STR = "%Y-%m-%dT%H:%M:%SZ";
 
@@ -210,4 +212,6 @@ string DateTime::CalculateGmtTimestampAsString(const char* formatStr)
 {
     DateTime now = Now();
     return now.ToGmtString(formatStr);
+}
+
 }

@@ -140,6 +140,9 @@ devenv Demo.sln /build
 #include "jdcloud_signer/util/logging/Logging.h"
 #include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
 
+using namespace std;
+using namespace jdcloud_signer;
+
 // 配置日志
 ConsoleLogSystem* cls = new ConsoleLogSystem(LogLevel::Debug);
 shared_ptr<ConsoleLogSystem> log(cls);

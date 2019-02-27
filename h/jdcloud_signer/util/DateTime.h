@@ -19,6 +19,8 @@
 #include <chrono>
 #include <string>
 
+namespace jdcloud_signer {
+
 enum class DateFormat
 {
     RFC822, //for http headers
@@ -167,3 +169,5 @@ private:
     tm ConvertTimestampToLocalTimeStruct() const;
     tm ConvertTimestampToGmtStruct() const;
 };
+
+}

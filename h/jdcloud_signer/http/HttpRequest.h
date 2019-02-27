@@ -21,6 +21,8 @@
 #include "jdcloud_signer/http/URI.h"
 #include "jdcloud_signer/http/HttpTypes.h"
 
+namespace jdcloud_signer {
+
 extern const char* DATE_HEADER;
 extern const char* NONCE_HEADER;
 extern const char* AUTHORIZATION_HEADER;
@@ -127,3 +129,5 @@ private:
     std::shared_ptr<std::iostream> bodyStream;
     static const std::string m_emptyHeader;
 };
+
+}

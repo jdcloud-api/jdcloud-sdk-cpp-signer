@@ -29,6 +29,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 void StringUtils::Replace(string& s, const char* search, const char* replace)
 {
     if(!search || !replace)
@@ -291,4 +293,6 @@ double StringUtils::ConvertToDouble(const char* source)
     }
 
     return std::strtod(source, NULL);
+}
+
 }

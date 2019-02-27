@@ -19,6 +19,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 namespace SchemeMapper
 {
 
@@ -55,3 +57,5 @@ namespace SchemeMapper
     }
 
 } // namespace SchemeMapper
+
+}

@@ -21,6 +21,8 @@
 #include <memory.h>
 #include "HashResult.h"
 
+namespace jdcloud_signer {
+
 class Sha256HMAC
 {
 public:
@@ -35,3 +37,5 @@ public:
      */
     HashResult Calculate(const std::string& toSign, const std::string& secret);
 };
+
+}

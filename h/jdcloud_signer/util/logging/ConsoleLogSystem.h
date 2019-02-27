@@ -18,6 +18,8 @@
 
 #include "jdcloud_signer/util/logging/FormattedLogSystem.h"
 
+namespace jdcloud_signer {
+
 /**
  * Log system interface that logs to std::cout
  */
@@ -37,3 +39,5 @@ protected:
 
     virtual void ProcessFormattedStatement(std::string&& statement) override;
 };
+
+}

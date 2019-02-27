@@ -25,6 +25,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 static string CreateLogPrefixLine(LogLevel logLevel, const char* tag)
 {
     stringstream ss;
@@ -76,4 +78,6 @@ void FormattedLogSystem::LogStream(LogLevel logLevel, const char* tag, const ost
     ss << CreateLogPrefixLine(logLevel, tag) << message_stream.rdbuf()->str() << std::endl;
 
     ProcessFormattedStatement(ss.str());
+}
+
 }

@@ -22,6 +22,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 const char* DATE_HEADER = "x-jdcloud-date";
 const char* NONCE_HEADER = "x-jdcloud-nonce";
 const char* AUTHORIZATION_HEADER = "authorization";
@@ -110,4 +112,6 @@ int64_t HttpRequest::GetSize() const
     std::for_each(headerMap.cbegin(), headerMap.cend(), [&](const HeaderValueCollection::value_type& kvPair){ size += kvPair.first.length(); size += kvPair.second.length(); });
 
     return size;
+}
+
 }

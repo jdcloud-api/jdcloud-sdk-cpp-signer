@@ -20,6 +20,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 string GetLogLevelName(LogLevel logLevel)
 {
     switch (logLevel)
@@ -40,4 +42,6 @@ string GetLogLevelName(LogLevel logLevel)
         assert(0);
         return "";
     }
+}
+
 }

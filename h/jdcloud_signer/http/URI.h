@@ -21,6 +21,8 @@
 #include <map>
 #include "jdcloud_signer/http/Scheme.h"
 
+namespace jdcloud_signer {
+
 extern const char* SEPARATOR;
 static const uint16_t HTTP_DEFAULT_PORT = 80;
 static const uint16_t HTTPS_DEFAULT_PORT = 443;
@@ -169,3 +171,5 @@ private:
     std::string m_path;
     std::string m_queryString;
 };
+
+}

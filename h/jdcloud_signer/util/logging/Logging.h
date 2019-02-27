@@ -18,6 +18,8 @@
 
 #include <memory>
 
+namespace jdcloud_signer {
+
 class LogSystemInterface;
 
 // Standard interface
@@ -36,3 +38,5 @@ void ShutdownLogging(void);
  * Get currently configured log system instance.
  */
 LogSystemInterface* GetLogSystem();
+
+}

@@ -18,6 +18,8 @@
 
 #include <string>
 
+namespace jdcloud_signer {
+
 /**
  * LogLevel used to control verbosity of logging system.
  */
@@ -33,3 +35,5 @@ enum class LogLevel : int
 };
 
 std::string GetLogLevelName(LogLevel logLevel);
+
+}

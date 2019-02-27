@@ -19,6 +19,8 @@
 #include <string>
 #include <map>
 
+namespace jdcloud_signer {
+
 /**
  * Models Http methods.
  */
@@ -42,3 +44,5 @@ namespace HttpMethodMapper
 
 typedef std::pair<std::string, std::string> HeaderValuePair;
 typedef std::map<std::string, std::string> HeaderValueCollection;
+
+}

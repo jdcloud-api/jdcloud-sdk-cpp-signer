@@ -22,6 +22,8 @@
 #include <memory.h>
 #include "HashResult.h"
 
+namespace jdcloud_signer {
+
 class Sha256
 {
 public:
@@ -41,3 +43,5 @@ public:
      */
     HashResult Calculate(std::istream& stream);
 };
+
+}
