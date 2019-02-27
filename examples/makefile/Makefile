@@ -7,4 +7,4 @@ main: main.o
 	g++ -o $@ $^ `pkg-config --libs libjdcloudsigner`
 
 main_static: main.o
-	g++ -Bstatic -o $@ $^ `pkg-config --libs --static libjdcloudsigner`
+	g++ -static -Bstatic -o $@ $^ `pkg-config --libs --static libjdcloudsigner`	

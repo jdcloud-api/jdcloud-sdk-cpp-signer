@@ -6,6 +6,7 @@ includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
 Name: Jdcloud Signer Library
 Description: Jdcloud Signer Library
 Version: @VERSION@
+Requires.private: libssl uuid
 Cflags: -I${includedir}/ @JDCLOUDSIGNER_PC_CFLAGS@
 Libs: -L${libdir} -ljdcloudsigner
 Libs.private: @JDCLOUDSIGNER_PC_LIBS@
