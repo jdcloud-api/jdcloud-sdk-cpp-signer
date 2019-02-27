@@ -54,6 +54,8 @@ aux_source_directory(util/logging DIR_LIB_SRCS)
 
 add_library(jdcloudsigner OBJECT ${DIR_LIB_SRCS})
 set_property(TARGET jdcloudsigner PROPERTY POSITION_INDEPENDENT_CODE 1)
+set_property(TARGET jdcloudsigner PROPERTY CXX_STANDARD 11)
+
 add_library(jdcloudsigner_shared SHARED $<TARGET_OBJECTS:jdcloudsigner>)
 set_target_properties(jdcloudsigner_shared PROPERTIES OUTPUT_NAME jdcloudsigner)
 add_library(jdcloudsigner_static STATIC $<TARGET_OBJECTS:jdcloudsigner>)
