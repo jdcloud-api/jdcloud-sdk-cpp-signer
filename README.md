@@ -6,6 +6,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+- [版本 0.1.0 的使用说明](#%E7%89%88%E6%9C%AC-010-%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 - [基本说明](#%E5%9F%BA%E6%9C%AC%E8%AF%B4%E6%98%8E)
 - [Linux（Ubuntu）](#linuxubuntu)
   - [安装方法](#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95)
