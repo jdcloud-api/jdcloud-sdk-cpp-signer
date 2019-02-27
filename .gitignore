@@ -11,3 +11,4 @@ CMakeCache.txt
 install_manifest.txt
 *.dylib
 *.pc
+*.o
