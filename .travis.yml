@@ -8,7 +8,10 @@ compiler:
 before_install:
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew update'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew upgrade cmake'
-script: cmake --version && cmake . && make && sudo make install
+script:
+  - cmake --version && pkg-config --version
+  - cmake . && make && sudo make install
+  - cd examples/makefile && make
 dist: xenial
 addons:
   apt:
