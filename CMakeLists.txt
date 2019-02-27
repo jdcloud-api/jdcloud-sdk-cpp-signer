@@ -29,7 +29,7 @@ set(CMAKE_BUILD_TYPE "Release")
 
 add_executable(Demo main.cpp)
 
-target_link_libraries(Demo jdcloudsigner)
+target_link_libraries(Demo jdcloudsigner_static)
 
 if (APPLE AND EXISTS /usr/local/opt/openssl)
     target_link_directories(Demo PRIVATE /usr/local/opt/openssl/lib)
