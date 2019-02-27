@@ -27,13 +27,23 @@ class HMACRAIIGuard {
 public:
     HMACRAIIGuard()
     {
+#if OPENSSL_VERSION_NUMBER < 0x10100000L
+        m_ctx = new HMAC_CTX;
+        HMAC_CTX_init(m_ctx);
+#else
         m_ctx = HMAC_CTX_new();
+#endif
         assert(m_ctx != nullptr);
     }
 
     ~HMACRAIIGuard()
     {
+#if OPENSSL_VERSION_NUMBER < 0x10100000L
+        HMAC_CTX_cleanup(m_ctx);
+        delete m_ctx;
+#else
         HMAC_CTX_free(m_ctx);
+#endif
         m_ctx = nullptr;
     }
 
