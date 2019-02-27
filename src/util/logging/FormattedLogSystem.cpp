@@ -14,9 +14,9 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "util/logging/FormattedLogSystem.h"
+#include "jdcloud_signer/util/logging/FormattedLogSystem.h"
 
-#include "util/DateTime.h"
+#include "jdcloud_signer/util/DateTime.h"
 
 #include <fstream>
 #include <cstdarg>

@@ -18,8 +18,8 @@
 
 #include <iostream>
 #include <memory>
-#include "http/URI.h"
-#include "http/HttpTypes.h"
+#include "jdcloud_signer/http/URI.h"
+#include "jdcloud_signer/http/HttpTypes.h"
 
 using std::iostream;
 

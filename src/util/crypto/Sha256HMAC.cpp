@@ -15,8 +15,8 @@
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
 #include <openssl/hmac.h>
-#include "util/crypto/Sha256HMAC.h"
-#include "util/crypto/HashingUtils.h"
+#include "jdcloud_signer/util/crypto/Sha256HMAC.h"
+#include "jdcloud_signer/util/crypto/HashingUtils.h"
 
 class HMACRAIIGuard {
 public:

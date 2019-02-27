@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include "util/logging/FormattedLogSystem.h"
+#include "jdcloud_signer/util/logging/FormattedLogSystem.h"
 
 /**
  * Log system interface that logs to std::cout

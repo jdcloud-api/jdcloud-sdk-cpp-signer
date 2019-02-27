@@ -14,8 +14,8 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "util/logging/Logging.h"
-#include "util/logging/LogSystemInterface.h"
+#include "jdcloud_signer/util/logging/Logging.h"
+#include "jdcloud_signer/util/logging/LogSystemInterface.h"
 
 static std::shared_ptr<LogSystemInterface> LogSystem(nullptr);
 

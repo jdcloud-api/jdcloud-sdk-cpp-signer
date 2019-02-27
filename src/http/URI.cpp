@@ -20,8 +20,8 @@
 #include <algorithm>
 #include <iomanip>
 #include <vector>
-#include "http/URI.h"
-#include "util/StringUtils.h"
+#include "jdcloud_signer/http/URI.h"
+#include "jdcloud_signer/util/StringUtils.h"
 
 using std::vector;
 

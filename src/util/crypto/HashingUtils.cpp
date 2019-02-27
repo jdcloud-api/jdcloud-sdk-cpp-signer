@@ -14,9 +14,9 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
+#include "jdcloud_signer/util/crypto/HashingUtils.h"
 #include <sstream>
 #include <iomanip>
-#include "util/crypto/HashingUtils.h"
 
 string HashingUtils::HexEncode(const unsigned char* message, size_t length)
 {

@@ -22,11 +22,11 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include "Credential.h"
-#include "util/crypto/Sha256.h"
-#include "util/crypto/Sha256HMAC.h"
-#include "util/DateTime.h"
-#include "http/HttpRequest.h"
+#include "jdcloud_signer/Credential.h"
+#include "jdcloud_signer/util/crypto/Sha256.h"
+#include "jdcloud_signer/util/crypto/Sha256HMAC.h"
+#include "jdcloud_signer/util/DateTime.h"
+#include "jdcloud_signer/http/HttpRequest.h"
 
 using std::string;
 using std::map;
