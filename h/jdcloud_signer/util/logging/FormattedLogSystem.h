@@ -24,10 +24,6 @@
 #include <ostream>
 #include <sstream>
 
-using std::string;
-using std::ostringstream;
-using std::stringstream;
-
 /**
  * Logger that formats log messages into [LEVEL] timestamp [threadid] message
  */
@@ -54,14 +50,14 @@ public:
     /**
      * Writes the stream to ProcessFormattedStatement.
      */
-    virtual void LogStream(LogLevel logLevel, const char* tag, const ostringstream &messageStream) override;
+    virtual void LogStream(LogLevel logLevel, const char* tag, const std::ostringstream &messageStream) override;
 
 protected:
     /**
      * This is the method that most logger implementations will want to override.
      * At this point the message is formatted and is ready to go to the output stream
      */
-    virtual void ProcessFormattedStatement(string&& statement) = 0;
+    virtual void ProcessFormattedStatement(std::string&& statement) = 0;
 
 private:
     std::atomic<LogLevel> m_logLevel;

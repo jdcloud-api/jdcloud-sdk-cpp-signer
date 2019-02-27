@@ -20,28 +20,24 @@
 #include <vector>
 #include <sstream>
 
-using std::string;
-using std::vector;
-using std::stringstream;
-
 /**
  * All the things the c++ stdlib is missing for string operations that I needed.
  */
 class StringUtils
 {
 public:
-    static void Replace(string& s, const char* search, const char* replace);
+    static void Replace(std::string& s, const char* search, const char* replace);
 
     /**
      * Converts a string to lower case.
      */
-    static string ToLower(const char* source);
+    static std::string ToLower(const char* source);
 
 
     /**
      * Converts a string to upper case.
      */
-    static string ToUpper(const char* source);
+    static std::string ToUpper(const char* source);
 
 
     /**
@@ -53,32 +49,32 @@ public:
     /**
      * URL encodes a string (uses %20 not + for spaces).
      */
-    static string URLEncode(const char* unsafe);
+    static std::string URLEncode(const char* unsafe);
 
     /**
      * Http Clients tend to escape some characters but not all. Escaping all of them causes problems, because the client
      * will also try to escape them.
      * So this only escapes non-ascii characters and the + character
      */
-    static string UTF8Escape(const char* unicodeString, const char* delimiter);
+    static std::string UTF8Escape(const char* unicodeString, const char* delimiter);
 
     /**
      * URL encodes a double (if it ends up going to scientific notation) otherwise it just returns it as a string.
      */
-    static string URLEncode(double unsafe);
+    static std::string URLEncode(double unsafe);
 
 
     /**
      * Decodes a URL encoded string (will handle both encoding schemes for spaces).
      */
-    static string URLDecode(const char* safe);
+    static std::string URLDecode(const char* safe);
 
     /**
      * @brief Splits a string on a delimiter (empty items are excluded).
      * @param toSplit, the original string to split
      * @param splitOn, the delemiter you want to use.
      */
-    static vector<string> Split(const string& toSplit, char splitOn);
+    static std::vector<std::string> Split(const std::string& toSplit, char splitOn);
 
     /**
      * @brief Splits a string on a delimiter (empty items are excluded).
@@ -86,30 +82,30 @@ public:
      * @param splitOn, the delemiter you want to use.
      * @param numOfTargetParts, how many target parts you want to get, if it is 0, as many as possible.
      */
-    static vector<string> Split(const string& toSplit, char splitOn, size_t numOfTargetParts);
+    static std::vector<std::string> Split(const std::string& toSplit, char splitOn, size_t numOfTargetParts);
 
 
     /**
      * Splits a string on new line characters.
      */
-    static vector<string> SplitOnLine(const string& toSplit);
+    static std::vector<std::string> SplitOnLine(const std::string& toSplit);
 
 
     /** static vector<string> SplitOnRegex(string regex);
      *  trim from start
      */
-    static string LTrim(const char* source);
+    static std::string LTrim(const char* source);
 
 
     /**
      * trim from end
      */
-    static string RTrim(const char* source);
+    static std::string RTrim(const char* source);
 
     /**
      * trim from both ends
      */
-    static string Trim(const char* source);
+    static std::string Trim(const char* source);
 
 
     /**

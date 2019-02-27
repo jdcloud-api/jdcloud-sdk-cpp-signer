@@ -12,3 +12,4 @@ install_manifest.txt
 *.dylib
 *.pc
 *.o
+.vscode

@@ -18,6 +18,8 @@
 #include <sstream>
 #include <iomanip>
 
+using namespace std;
+
 string HashingUtils::HexEncode(const unsigned char* message, size_t length)
 {
     std::stringstream ss;

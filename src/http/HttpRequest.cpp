@@ -20,6 +20,8 @@
 #include "jdcloud_signer/util/StringUtils.h"
 #include "jdcloud_signer/http/HttpRequest.h"
 
+using namespace std;
+
 const char* DATE_HEADER = "x-jdcloud-date";
 const char* NONCE_HEADER = "x-jdcloud-nonce";
 const char* AUTHORIZATION_HEADER = "authorization";

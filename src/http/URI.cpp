@@ -14,16 +14,17 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
+#include "jdcloud_signer/http/URI.h"
+
 #include <cstdlib>
 #include <cctype>
 #include <cassert>
 #include <algorithm>
 #include <iomanip>
 #include <vector>
-#include "jdcloud_signer/http/URI.h"
 #include "jdcloud_signer/util/StringUtils.h"
 
-using std::vector;
+using namespace std;
 
 const char* SEPARATOR = "://";
 

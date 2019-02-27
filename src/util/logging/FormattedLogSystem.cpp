@@ -23,6 +23,8 @@
 #include <stdio.h>
 #include <thread>
 
+using namespace std;
+
 static string CreateLogPrefixLine(LogLevel logLevel, const char* tag)
 {
     stringstream ss;

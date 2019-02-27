@@ -18,8 +18,6 @@
 
 #include <string>
 
-using std::string;
-
 /**
  * LogLevel used to control verbosity of logging system.
  */
@@ -34,4 +32,4 @@ enum class LogLevel : int
     Trace = 6
 };
 
-string GetLogLevelName(LogLevel logLevel);
+std::string GetLogLevelName(LogLevel logLevel);

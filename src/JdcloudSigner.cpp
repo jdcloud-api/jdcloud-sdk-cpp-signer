@@ -25,6 +25,8 @@
 #include "jdcloud_signer/http/HttpTypes.h"
 #include "jdcloud_signer/util/logging/LogMacros.h"
 
+using namespace std;
+
 static const char* EQ = "=";
 static const char* SIGNATURE = "Signature";
 static const char* HMAC_SHA256 = "JDCLOUD2-HMAC-SHA256";

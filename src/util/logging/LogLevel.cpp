@@ -18,6 +18,8 @@
 
 #include <cassert>
 
+using namespace std;
+
 string GetLogLevelName(LogLevel logLevel)
 {
     switch (logLevel)

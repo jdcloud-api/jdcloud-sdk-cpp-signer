@@ -17,6 +17,8 @@
 #include "jdcloud_signer/http/Scheme.h"
 #include "jdcloud_signer/util/StringUtils.h"
 
+using namespace std;
+
 namespace SchemeMapper
 {
 

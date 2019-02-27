@@ -20,10 +20,7 @@
 #include "jdcloud_signer/util/logging/Logging.h"
 #include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
 
-using std::string;
-using std::map;
-using std::pair;
-using std::shared_ptr;
+using namespace std;
 
 void TestRequestWithoutBody() {
     ConsoleLogSystem* cls = new ConsoleLogSystem(LogLevel::Debug);

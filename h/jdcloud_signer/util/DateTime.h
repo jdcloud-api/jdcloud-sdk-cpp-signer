@@ -19,8 +19,6 @@
 #include <chrono>
 #include <string>
 
-using std::string;
-
 enum class DateFormat
 {
     RFC822, //for http headers
@@ -114,17 +112,17 @@ public:
     /**
      * Convert dateTime to local time string using predefined format.
      */
-    string ToLocalTimeString(DateFormat format) const;
+    std::string ToLocalTimeString(DateFormat format) const;
 
     /**
      * Convert dateTime to local time string using arbitrary format.
      */
-    string ToLocalTimeString(const char* formatStr) const;
+    std::string ToLocalTimeString(const char* formatStr) const;
 
     /**
      * Convert dateTime to GMT time string using arbitrary format.
      */
-    string ToGmtString(const char* formatStr) const;
+    std::string ToGmtString(const char* formatStr) const;
 
     /**
      * Get the representation of this datetime as seconds.milliseconds since epoch
@@ -159,7 +157,7 @@ public:
     /**
      * Calculates the current gmt timestamp, formats it, and returns it as a string
      */
-    static string CalculateGmtTimestampAsString(const char* formatStr);
+    static std::string CalculateGmtTimestampAsString(const char* formatStr);
 
 private:
     std::chrono::system_clock::time_point m_time;
