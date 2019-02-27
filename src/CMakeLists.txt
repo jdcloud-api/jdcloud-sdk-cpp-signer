@@ -53,6 +53,7 @@ aux_source_directory(util/crypto DIR_LIB_SRCS)
 aux_source_directory(util/logging DIR_LIB_SRCS)
 
 add_library(jdcloudsigner OBJECT ${DIR_LIB_SRCS})
+target_include_directories(jdcloudsigner PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 set_property(TARGET jdcloudsigner PROPERTY POSITION_INDEPENDENT_CODE 1)
 set_property(TARGET jdcloudsigner PROPERTY CXX_STANDARD 11)
 
