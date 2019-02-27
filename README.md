@@ -20,6 +20,12 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## 版本 0.1.0 的使用说明
+
+* 请参考: https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer/blob/v0.1.0/README.md
+
+以下为git master分支版本的使用说明
+
 ## 基本说明
 京东云C++签名工具提供了C++语言访问京东云OpenAPI时的请求签名功能，它以AccessKey和SecretKey为素材，将HTTP请求的相关信息经过多次处理，再加上时间和nonce随机值对请求进行签名。使用本签名工具可以节省您编写签名过程的时间，没有正确签名，有可能会造成无法正常访问京东云OpenAPI。使用签名功能，可以保证您的身份不被冒充。请注意AK/SK的安全。
 
@@ -125,14 +131,14 @@ devenv Demo.sln /build
 使用Visual Studio打开Demo.sln解决方案，编译。
 
 ## 调用方法
-```
+```cpp
 // 引用头文件
-#include "Credential.h"
-#include "JdcloudSigner.h"
-#include "http/HttpTypes.h"
-#include "http/HttpRequest.h"
-#include "util/logging/Logging.h"
-#include "util/logging/ConsoleLogSystem.h"
+#include "jdcloud_signer/Credential.h"
+#include "jdcloud_signer/JdcloudSigner.h"
+#include "jdcloud_signer/http/HttpTypes.h"
+#include "jdcloud_signer/http/HttpRequest.h"
+#include "jdcloud_signer/util/logging/Logging.h"
+#include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
 
 // 配置日志
 ConsoleLogSystem* cls = new ConsoleLogSystem(LogLevel::Debug);
