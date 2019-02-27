@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include <iostream>
+#include <cassert>
 #include "jdcloud_signer/Credential.h"
 #include "jdcloud_signer/JdcloudSigner.h"
 #include "jdcloud_signer/http/HttpTypes.h"
