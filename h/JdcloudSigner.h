@@ -53,7 +53,7 @@ private:
                                 const string& region, const string& serviceName) const;
 
     string ComputeHash(const string& secretKey, const string& simpleDate, const string& region,
-                       const string& serviceName) const;
+                        const string& serviceName) const;
     string ComputePayloadHash(HttpRequest& request) const;
     DateTime GetSigningTimestamp() const { return DateTime::Now(); }
 
@@ -64,4 +64,3 @@ private:
     unique_ptr<Sha256> m_hash;
     unique_ptr<Sha256HMAC> m_hmac;
 };
-

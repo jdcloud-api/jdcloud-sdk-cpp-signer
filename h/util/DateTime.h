@@ -67,8 +67,8 @@ public:
     DateTime();
 
     /**
-    *  Initializes time point to any other arbirtrary timepoint
-    */
+     *  Initializes time point to any other arbirtrary timepoint
+     */
     DateTime(const std::chrono::system_clock::time_point& timepointToAssign);
 
     /**
@@ -102,8 +102,8 @@ public:
     DateTime& operator=(int64_t millisSinceEpoch);
 
     /**
-    * Assign from another time_point
-    */
+     * Assign from another time_point
+     */
     DateTime& operator=(const std::chrono::system_clock::time_point& timepointToAssign);
 
     /**
@@ -117,13 +117,13 @@ public:
     string ToLocalTimeString(DateFormat format) const;
 
     /**
-    * Convert dateTime to local time string using arbitrary format.
-    */
+     * Convert dateTime to local time string using arbitrary format.
+     */
     string ToLocalTimeString(const char* formatStr) const;
 
     /**
-    * Convert dateTime to GMT time string using arbitrary format.
-    */
+     * Convert dateTime to GMT time string using arbitrary format.
+     */
     string ToGmtString(const char* formatStr) const;
 
     /**
@@ -142,8 +142,8 @@ public:
     std::chrono::system_clock::time_point UnderlyingTimestamp() const;
 
     /**
-    * Get whether or not this dateTime is in Daylight savings time. localTime if true, return local time, otherwise return UTC
-    */
+     * Get whether or not this dateTime is in Daylight savings time. localTime if true, return local time, otherwise return UTC
+     */
     bool IsDST(bool localTime = false) const;
 
     /**

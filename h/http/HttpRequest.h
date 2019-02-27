@@ -51,7 +51,7 @@ public:
     const URI& GetUri() const { return m_uri; }
     /**
      * Converts the URI into a string and returns it. If includeQueryString is set to true, the query string
-     * will be included in the returned value. 
+     * will be included in the returned value.
      */
     inline string GetURIString(bool includeQueryString = true) const
     {
@@ -115,13 +115,13 @@ public:
         m_uri.CanonicalizeQueryString();
     }
     /**
-    * Sets authorization header.
-    */
+     * Sets authorization header.
+     */
     inline void SetAuthorization(const string& value)
     {
         SetHeaderValue(AUTHORIZATION_HEADER, value);
     }
-    
+
 private:
     URI m_uri;
     HttpMethod m_method;

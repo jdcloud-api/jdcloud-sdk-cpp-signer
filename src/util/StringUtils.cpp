@@ -133,8 +133,8 @@ string StringUtils::URLEncode(const char* unsafe)
     for (auto i = unsafe, n = unsafe + unsafeLength; i != n; ++i)
     {
         int c = *i;
-		//MSVC 2015 has an assertion that c is positive in isalnum(). This breaks unicode support.
-		//bypass that with the first check.
+        //MSVC 2015 has an assertion that c is positive in isalnum(). This breaks unicode support.
+        //bypass that with the first check.
         if (c >= 0 && (isalnum(c) || c == '-' || c == '_' || c == '.' || c == '~'))
         {
             escaped << (char)c;

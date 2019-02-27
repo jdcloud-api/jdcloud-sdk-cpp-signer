@@ -77,7 +77,7 @@ const string& HttpRequest::GetHeaderValue(const char* headerName) const
     {
         return m_emptyHeader;
     }
-    
+
     return iter->second;
 }
 

@@ -32,12 +32,12 @@ public:
     virtual ~Sha256() {};
 
     /**
-    * Calculates a SHA256 Hash digest (not hex encoded)
-    */
+     * Calculates a SHA256 Hash digest (not hex encoded)
+     */
     HashResult Calculate(const std::string& str);
 
     /**
-    * Calculates a Hash digest on a stream (the entire stream is read)
-    */
+     * Calculates a Hash digest on a stream (the entire stream is read)
+     */
     HashResult Calculate(std::istream& stream);
 };

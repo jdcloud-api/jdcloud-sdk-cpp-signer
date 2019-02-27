@@ -69,7 +69,7 @@ HashResult Sha256::Calculate(std::istream& stream)
 
     auto currentPos = stream.tellg();
     if ((int)currentPos == -1)
-	{
+    {
         currentPos = 0;
         stream.clear();
     }
