@@ -12,9 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include(GNUInstallDirs)
+
 set (Demo_VERSION_MAJOR 0)
 set (Demo_VERSION_MINOR 1)
 set (Demo_VERSION_DEBUG 0)
+set(VERSION ${Demo_VERSION_MAJOR}.${Demo_VERSION_MINOR}.${Demo_VERSION_DEBUG})
+
+CONFIGURE_FILE(
+    ${CMAKE_CURRENT_SOURCE_DIR}/libjdcloudsigner.pc.in
+    ${CMAKE_CURRENT_BINARY_DIR}/libjdcloudsigner.pc
+@ONLY)
+
+INSTALL(
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/libjdcloudsigner.pc
+    DESTINATION lib${LIB_SUFFIX}/pkgconfig
+)
 
 set(CMAKE_BUILD_TYPE "Release")
 
