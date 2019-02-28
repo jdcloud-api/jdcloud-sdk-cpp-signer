@@ -26,8 +26,8 @@ if(APPLE)
     FIND_PACKAGE(OpenSSL)
 endif(APPLE)
 
-pkg_check_modules (MAIN REQUIRED libjdcloud_signer)
+pkg_check_modules(MAIN REQUIRED libjdcloud_signer)
 
 add_executable(main main.cpp)
 target_include_directories(main PUBLIC ${MAIN_INCLUDE_DIRS})
-target_link_libraries(main ${MAIN_LIBRARIES})
+target_link_options(main PUBLIC ${MAIN_LDFLAGS})

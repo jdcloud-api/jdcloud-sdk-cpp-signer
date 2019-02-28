@@ -13,3 +13,4 @@ install_manifest.txt
 *.pc
 *.o
 .vscode
+examples/cmake/main
