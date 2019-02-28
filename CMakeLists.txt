@@ -17,18 +17,13 @@ project(Demo)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(${PROJECT_SOURCE_DIR}/h)
-include_directories(${PROJECT_SOURCE_DIR}/http)
-include_directories(${PROJECT_SOURCE_DIR}/util)
-include_directories(${PROJECT_SOURCE_DIR}/util/crypto)
-include_directories(${PROJECT_SOURCE_DIR}/util/logging)
+add_subdirectory(include)
 add_subdirectory(src)
-add_subdirectory(h)
 
 set(CMAKE_BUILD_TYPE "Release")
 
 add_executable(Demo main.cpp)
-
+target_include_directories(Demo PUBLIC ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(Demo jdcloudsigner_static)
 
 if (APPLE AND EXISTS /usr/local/opt/openssl)
