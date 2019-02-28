@@ -14,7 +14,7 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "JdcloudSignerImpl.h"
+#include "jdcloud_signer/JdcloudSignerImpl.h"
 
 #ifdef WIN32
 #include <objbase.h>
@@ -24,7 +24,7 @@
 #include "jdcloud_signer/util/crypto/HashingUtils.h"
 #include "jdcloud_signer/util/StringUtils.h"
 #include "jdcloud_signer/http/HttpTypes.h"
-#include "jdcloud_signer/util/logging/LogMacros.h"
+#include "jdcloud_signer/logging/LogMacros.h"
 
 using namespace std;
 

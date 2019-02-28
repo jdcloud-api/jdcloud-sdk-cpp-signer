@@ -14,23 +14,34 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "jdcloud_signer/util/logging/Logging.h"
-#include "jdcloud_signer/util/logging/LogSystemInterface.h"
+#include "jdcloud_signer/logging/LogLevel.h"
+
+#include <cassert>
+
+using namespace std;
 
 namespace jdcloud_signer {
 
-static std::shared_ptr<LogSystemInterface> LogSystem(nullptr);
-
-void InitializeLogging(const std::shared_ptr<LogSystemInterface> &logSystem) {
-    LogSystem = logSystem;
-}
-
-void ShutdownLogging(void) {
-    InitializeLogging(nullptr);
-}
-
-LogSystemInterface *GetLogSystem() {
-    return LogSystem.get();
+string GetLogLevelName(LogLevel logLevel)
+{
+    switch (logLevel)
+    {
+    case LogLevel::Fatal:
+        return "FATAL";
+    case LogLevel::Error:
+        return "ERROR";
+    case LogLevel::Warn:
+        return "WARN";
+    case LogLevel::Info:
+        return "INFO";
+    case LogLevel::Debug:
+        return "DEBUG";
+    case LogLevel::Trace:
+        return "TRACE";
+    default:
+        assert(0);
+        return "";
+    }
 }
 
 }

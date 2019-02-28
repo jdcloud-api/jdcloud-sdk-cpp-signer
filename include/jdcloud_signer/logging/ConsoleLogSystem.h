@@ -14,18 +14,30 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
+#pragma once
 
-#include <iostream>
-#include <string>
-
-using std::string;
+#include "jdcloud_signer/logging/FormattedLogSystem.h"
 
 namespace jdcloud_signer {
 
-void ConsoleLogSystem::ProcessFormattedStatement(string&& statement)
+/**
+ * Log system interface that logs to std::cout
+ */
+class ConsoleLogSystem : public FormattedLogSystem
 {
-    std::cout << statement;
-}
+public:
+
+    using Base = FormattedLogSystem;
+
+    ConsoleLogSystem(LogLevel logLevel) :
+        Base(logLevel)
+    {}
+
+    virtual ~ConsoleLogSystem() {}
+
+protected:
+
+    virtual void ProcessFormattedStatement(std::string&& statement) override;
+};
 
 }

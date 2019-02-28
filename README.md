@@ -77,9 +77,7 @@ brew install libjdcloud_signer --HEAD
 ```
 include_directories(${PROJECT_SOURCE_DIR}/h)
 include_directories(${PROJECT_SOURCE_DIR}/http)
-include_directories(${PROJECT_SOURCE_DIR}/util)
-include_directories(${PROJECT_SOURCE_DIR}/util/crypto)
-include_directories(${PROJECT_SOURCE_DIR}/util/logging)
+include_directories(${PROJECT_SOURCE_DIR}/logging)
 ```
 3)	引用静态库
 ```
@@ -105,8 +103,8 @@ devenv Demo.sln /build
 #include "jdcloud_signer/JdcloudSigner.h"
 #include "jdcloud_signer/http/HttpTypes.h"
 #include "jdcloud_signer/http/HttpRequest.h"
-#include "jdcloud_signer/util/logging/Logging.h"
-#include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
+#include "jdcloud_signer/logging/Logging.h"
+#include "jdcloud_signer/logging/ConsoleLogSystem.h"
 
 using namespace std;
 using namespace jdcloud_signer;
