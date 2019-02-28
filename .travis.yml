@@ -10,7 +10,7 @@ before_install:
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew upgrade cmake'
 script:
   - cmake --version && pkg-config --version
-  - cmake . && make && sudo make install
+  - cmake . && make && make test && sudo make install
   - cd $TRAVIS_BUILD_DIR/examples/makefile && make
   - cd $TRAVIS_BUILD_DIR/examples/cmake && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig cmake . && make
 dist: xenial
