@@ -8,5 +8,5 @@ Description: Jdcloud Signer Library
 Version: @VERSION@
 Requires.private: libcrypto uuid
 Cflags: -I${includedir}/ @JDCLOUDSIGNER_PC_CFLAGS@
-Libs: -L${libdir} -ljdcloudsigner
+Libs: -L${libdir} -ljdcloud_signer
 Libs.private: @JDCLOUDSIGNER_PC_LIBS@

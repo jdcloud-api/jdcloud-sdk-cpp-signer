@@ -15,17 +15,18 @@
 include(GNUInstallDirs)
 
 set (Demo_VERSION_MAJOR 0)
-set (Demo_VERSION_MINOR 1)
+set (Demo_VERSION_MINOR 2)
 set (Demo_VERSION_DEBUG 0)
 set(VERSION ${Demo_VERSION_MAJOR}.${Demo_VERSION_MINOR}.${Demo_VERSION_DEBUG})
+set(SOVERSION ${VERSION})
 
 CONFIGURE_FILE(
-    ${CMAKE_CURRENT_SOURCE_DIR}/libjdcloudsigner.pc.in
-    ${CMAKE_CURRENT_BINARY_DIR}/libjdcloudsigner.pc
+    ${CMAKE_CURRENT_SOURCE_DIR}/libjdcloud_signer.pc.in
+    ${CMAKE_CURRENT_BINARY_DIR}/libjdcloud_signer.pc
 @ONLY)
 
 INSTALL(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/libjdcloudsigner.pc
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/libjdcloud_signer.pc
     DESTINATION lib${LIB_SUFFIX}/pkgconfig
 )
 
@@ -58,9 +59,11 @@ set_property(TARGET jdcloudsigner PROPERTY POSITION_INDEPENDENT_CODE 1)
 set_property(TARGET jdcloudsigner PROPERTY CXX_STANDARD 11)
 
 add_library(jdcloudsigner_shared SHARED $<TARGET_OBJECTS:jdcloudsigner>)
-set_target_properties(jdcloudsigner_shared PROPERTIES OUTPUT_NAME jdcloudsigner)
+set_target_properties(jdcloudsigner_shared PROPERTIES OUTPUT_NAME jdcloud_signer)
+set_target_properties(jdcloudsigner_shared PROPERTIES SOVERSION ${SOVERSION})
+
 add_library(jdcloudsigner_static STATIC $<TARGET_OBJECTS:jdcloudsigner>)
-set_target_properties(jdcloudsigner_static PROPERTIES OUTPUT_NAME jdcloudsigner)
+set_target_properties(jdcloudsigner_static PROPERTIES OUTPUT_NAME jdcloud_signer)
 
 install(TARGETS jdcloudsigner_shared
     LIBRARY
