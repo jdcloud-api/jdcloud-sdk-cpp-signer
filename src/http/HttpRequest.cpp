@@ -17,8 +17,8 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include "util/StringUtils.h"
-#include "http/HttpRequest.h"
+#include "jdcloud_signer/util/StringUtils.h"
+#include "jdcloud_signer/http/HttpRequest.h"
 
 const char* DATE_HEADER = "x-jdcloud-date";
 const char* NONCE_HEADER = "x-jdcloud-nonce";

@@ -14,7 +14,7 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "http/HttpTypes.h"
+#include "jdcloud_signer/http/HttpTypes.h"
 
 namespace HttpMethodMapper
 {

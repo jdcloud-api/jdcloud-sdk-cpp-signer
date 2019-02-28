@@ -14,7 +14,7 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "util/logging/LogLevel.h"
+#include "jdcloud_signer/util/logging/LogLevel.h"
 
 #include <cassert>
 

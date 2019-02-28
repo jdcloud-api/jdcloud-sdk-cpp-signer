@@ -19,11 +19,11 @@
 #else
 #include <uuid/uuid.h>
 #endif
-#include "JdcloudSigner.h"
-#include "util/crypto/HashingUtils.h"
-#include "util/StringUtils.h"
-#include "http/HttpTypes.h"
-#include "util/logging/LogMacros.h"
+#include "jdcloud_signer/JdcloudSigner.h"
+#include "jdcloud_signer/util/crypto/HashingUtils.h"
+#include "jdcloud_signer/util/StringUtils.h"
+#include "jdcloud_signer/http/HttpTypes.h"
+#include "jdcloud_signer/util/logging/LogMacros.h"
 
 static const char* EQ = "=";
 static const char* SIGNATURE = "Signature";

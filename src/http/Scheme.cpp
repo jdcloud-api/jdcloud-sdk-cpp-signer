@@ -14,8 +14,8 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "http/Scheme.h"
-#include "util/StringUtils.h"
+#include "jdcloud_signer/http/Scheme.h"
+#include "jdcloud_signer/util/StringUtils.h"
 
 namespace SchemeMapper
 {

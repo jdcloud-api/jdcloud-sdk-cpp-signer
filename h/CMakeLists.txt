@@ -1,8 +1,3 @@
-install(FILES
-    JdcloudSigner.h Credential.h
-    DESTINATION include
-)
-
 install(DIRECTORY
-    http util
+    jdcloud_signer
     DESTINATION include)

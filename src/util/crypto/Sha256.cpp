@@ -14,11 +14,11 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
+#include "jdcloud_signer/util/crypto/Sha256.h"
 #include <openssl/sha.h>
 #include <openssl/evp.h>
-#include "util/crypto/Sha256.h"
-#include "util/crypto/HashingUtils.h"
-#include "util/logging/LogMacros.h"
+#include "jdcloud_signer/util/crypto/HashingUtils.h"
+#include "jdcloud_signer/util/logging/LogMacros.h"
 
 class OpensslCtxRAIIGuard
 {

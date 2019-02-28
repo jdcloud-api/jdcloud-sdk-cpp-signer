@@ -16,8 +16,8 @@
 
 #pragma once
 
-#include "util/logging/LogSystemInterface.h"
-#include "util/logging/LogLevel.h"
+#include "jdcloud_signer/util/logging/LogSystemInterface.h"
+#include "jdcloud_signer/util/logging/LogLevel.h"
 
 #include <atomic>
 #include <string>

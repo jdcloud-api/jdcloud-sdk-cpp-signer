@@ -14,7 +14,7 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
-#include "util/logging/ConsoleLogSystem.h"
+#include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
 
 #include <iostream>
 #include <string>

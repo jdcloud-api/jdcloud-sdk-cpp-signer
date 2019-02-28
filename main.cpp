@@ -13,12 +13,12 @@
 // limitations under the License.
 
 #include <iostream>
-#include "Credential.h"
-#include "JdcloudSigner.h"
-#include "http/HttpTypes.h"
-#include "http/HttpRequest.h"
-#include "util/logging/Logging.h"
-#include "util/logging/ConsoleLogSystem.h"
+#include "jdcloud_signer/Credential.h"
+#include "jdcloud_signer/JdcloudSigner.h"
+#include "jdcloud_signer/http/HttpTypes.h"
+#include "jdcloud_signer/http/HttpRequest.h"
+#include "jdcloud_signer/util/logging/Logging.h"
+#include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
 
 using std::string;
 using std::map;

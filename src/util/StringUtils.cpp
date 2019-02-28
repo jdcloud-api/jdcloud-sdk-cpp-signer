@@ -20,7 +20,7 @@
 #include <cstdio>
 #include <cstring>
 #include <functional>
-#include "util/StringUtils.h"
+#include "jdcloud_signer/util/StringUtils.h"
 
 #ifdef _WIN32
 #include <Windows.h>

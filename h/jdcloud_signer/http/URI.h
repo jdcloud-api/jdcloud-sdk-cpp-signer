@@ -19,7 +19,7 @@
 #include <stdint.h>
 #include <string>
 #include <map>
-#include "http/Scheme.h"
+#include "jdcloud_signer/http/Scheme.h"
 
 using std::string;
 using std::map;
