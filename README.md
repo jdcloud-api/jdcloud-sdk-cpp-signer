@@ -1,6 +1,8 @@
 # 京东云 C++ 签名库
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/95b764853f0d4660916c3f1f9a4c5749)](https://app.codacy.com/app/lidaobing/jdcloud-sdk-cpp-signer?utm_source=github.com&utm_medium=referral&utm_content=jdcloud-api/jdcloud-sdk-cpp-signer&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer.svg?branch=master)](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer)
+[![CodeFactor](https://www.codefactor.io/repository/github/jdcloud-api/jdcloud-sdk-cpp-signer/badge)](https://www.codefactor.io/repository/github/jdcloud-api/jdcloud-sdk-cpp-signer)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
