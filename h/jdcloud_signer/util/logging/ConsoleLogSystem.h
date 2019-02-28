@@ -35,5 +35,5 @@ public:
 
 protected:
 
-    virtual void ProcessFormattedStatement(string&& statement) override;
+    virtual void ProcessFormattedStatement(std::string&& statement) override;
 };

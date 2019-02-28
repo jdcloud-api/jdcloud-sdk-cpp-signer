@@ -18,12 +18,10 @@
 
 #include <string>
 
-using std::string;
-
 class HashingUtils
 {
 public:
 
-    static string HexEncode(const unsigned char* message, size_t length);
+    static std::string HexEncode(const unsigned char* message, size_t length);
 
 };

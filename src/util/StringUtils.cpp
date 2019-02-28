@@ -14,18 +14,20 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
+#include "jdcloud_signer/util/StringUtils.h"
+
 #include <algorithm>
 #include <iomanip>
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
 #include <functional>
-#include "jdcloud_signer/util/StringUtils.h"
 
 #ifdef _WIN32
 #include <Windows.h>
 #endif
 
+using namespace std;
 
 void StringUtils::Replace(string& s, const char* search, const char* replace)
 {

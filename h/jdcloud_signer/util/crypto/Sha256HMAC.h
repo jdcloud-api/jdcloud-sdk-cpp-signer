@@ -21,8 +21,6 @@
 #include <memory.h>
 #include "HashResult.h"
 
-using std::string;
-
 class Sha256HMAC
 {
 public:
@@ -35,5 +33,5 @@ public:
     /**
      * Calculates a SHA256 HMAC digest (not hex encoded)
      */
-    HashResult Calculate(const string& toSign, const string& secret);
+    HashResult Calculate(const std::string& toSign, const std::string& secret);
 };

@@ -18,21 +18,19 @@
 
 #include <string>
 
-using std::string;
-
 class Credential
 {
 public:
-    Credential(const string& accessKey, const string& secretKey):
+    Credential(const std::string& accessKey, const std::string& secretKey):
         m_accessKey(accessKey), m_secretKey(secretKey)
     {}
 
-    inline const string& GetAccessKey() const
+    inline const std::string& GetAccessKey() const
     {
         return m_accessKey;
     }
 
-    inline const string& GetSecretKey() const
+    inline const std::string& GetSecretKey() const
     {
         return m_secretKey;
     }

@@ -19,10 +19,6 @@
 #include <string>
 #include <map>
 
-using std::pair;
-using std::map;
-using std::string;
-
 /**
  * Models Http methods.
  */
@@ -44,5 +40,5 @@ namespace HttpMethodMapper
     const char *GetNameForHttpMethod(HttpMethod httpMethod);
 }
 
-typedef pair<string, string> HeaderValuePair;
-typedef map<string, string> HeaderValueCollection;
+typedef std::pair<std::string, std::string> HeaderValuePair;
+typedef std::map<std::string, std::string> HeaderValueCollection;

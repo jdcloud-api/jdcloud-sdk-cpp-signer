@@ -18,8 +18,6 @@
 
 #include <ostream>
 
-using std::ostringstream;
-
 enum class LogLevel : int;
 
 /**
@@ -39,6 +37,6 @@ public:
     /**
      * Writes the stream to the output stream.
      */
-    virtual void LogStream(LogLevel logLevel, const char* tag, const ostringstream &messageStream) = 0;
+    virtual void LogStream(LogLevel logLevel, const char* tag, const std::ostringstream &messageStream) = 0;
 
 };

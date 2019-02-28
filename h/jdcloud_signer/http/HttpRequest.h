@@ -21,8 +21,6 @@
 #include "jdcloud_signer/http/URI.h"
 #include "jdcloud_signer/http/HttpTypes.h"
 
-using std::iostream;
-
 extern const char* DATE_HEADER;
 extern const char* NONCE_HEADER;
 extern const char* AUTHORIZATION_HEADER;
@@ -53,7 +51,7 @@ public:
      * Converts the URI into a string and returns it. If includeQueryString is set to true, the query string
      * will be included in the returned value.
      */
-    inline string GetURIString(bool includeQueryString = true) const
+    inline std::string GetURIString(bool includeQueryString = true) const
     {
         return m_uri.GetURIString(includeQueryString);
     }
@@ -67,7 +65,7 @@ public:
     /**
      * Gets the query string from the URI on this request.
      */
-    inline const string& GetQueryString() const
+    inline const std::string& GetQueryString() const
     {
         return m_uri.GetQueryString();
     }
@@ -78,15 +76,15 @@ public:
     /**
      * Get the value for a Header based on its name.
      */
-    const string& GetHeaderValue(const char* headerName) const;
+    const std::string& GetHeaderValue(const char* headerName) const;
     /**
      * Add a header pair
      */
-    void SetHeaderValue(const char* headerName, const string& headerValue);
+    void SetHeaderValue(const char* headerName, const std::string& headerValue);
     /**
      * Add a header pair
      */
-    void SetHeaderValue(const string& headerName, const string& headerValue);
+    void SetHeaderValue(const std::string& headerName, const std::string& headerValue);
     /**
      * delete pair by headerName
      */
@@ -94,11 +92,11 @@ public:
     /**
      * Adds a content body stream to the request. This stream will be used to send the body to the endpoint.
      */
-    inline void AddContentBody(const std::shared_ptr<iostream>& strContent) { bodyStream = strContent; }
+    inline void AddContentBody(const std::shared_ptr<std::iostream>& strContent) { bodyStream = strContent; }
     /**
      * Gets the content body stream that will be used for this request.
      */
-    inline const std::shared_ptr<iostream>& GetContentBody() const { return bodyStream; }
+    inline const std::shared_ptr<std::iostream>& GetContentBody() const { return bodyStream; }
     /**
      * Returns true if a header exists in the request with name
      */
@@ -117,7 +115,7 @@ public:
     /**
      * Sets authorization header.
      */
-    inline void SetAuthorization(const string& value)
+    inline void SetAuthorization(const std::string& value)
     {
         SetHeaderValue(AUTHORIZATION_HEADER, value);
     }
@@ -126,6 +124,6 @@ private:
     URI m_uri;
     HttpMethod m_method;
     HeaderValueCollection headerMap;
-    std::shared_ptr<iostream> bodyStream;
-    static const string m_emptyHeader;
+    std::shared_ptr<std::iostream> bodyStream;
+    static const std::string m_emptyHeader;
 };

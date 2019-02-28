@@ -28,39 +28,31 @@
 #include "jdcloud_signer/util/DateTime.h"
 #include "jdcloud_signer/http/HttpRequest.h"
 
-using std::string;
-using std::map;
-using std::set;
-using std::iostream;
-using std::stringstream;
-using std::unique_ptr;
-
-
 class JdcloudSigner
 {
 public:
-    JdcloudSigner(const Credential& credential, const string& serviceName, const string& region);
+    JdcloudSigner(const Credential& credential, const std::string& serviceName, const std::string& region);
 
     virtual ~JdcloudSigner();
 
     bool SignRequest(HttpRequest& request) const;
 
 private:
-    bool ShouldSignHeader(const string& header) const;
-    string GenerateSignature(const Credential& credentials, const string& stringToSign, const string& simpleDate) const;
-    string GenerateSignature(const string& stringToSign, const string& key) const;
-    string GenerateStringToSign(const string& dateValue, const string& simpleDate, const string& canonicalRequestHash,
-                                const string& region, const string& serviceName) const;
+    bool ShouldSignHeader(const std::string& header) const;
+    std::string GenerateSignature(const Credential& credentials, const std::string& stringToSign, const std::string& simpleDate) const;
+    std::string GenerateSignature(const std::string& stringToSign, const std::string& key) const;
+    std::string GenerateStringToSign(const std::string& dateValue, const std::string& simpleDate, const std::string& canonicalRequestHash,
+                                const std::string& region, const std::string& serviceName) const;
 
-    string ComputeHash(const string& secretKey, const string& simpleDate, const string& region,
-                        const string& serviceName) const;
-    string ComputePayloadHash(HttpRequest& request) const;
+    std::string ComputeHash(const std::string& secretKey, const std::string& simpleDate, const std::string& region,
+                        const std::string& serviceName) const;
+    std::string ComputePayloadHash(HttpRequest& request) const;
     DateTime GetSigningTimestamp() const { return DateTime::Now(); }
 
     Credential m_credential;
-    string m_serviceName;
-    string m_region;
-    set<string> m_unsignedHeaders;
-    unique_ptr<Sha256> m_hash;
-    unique_ptr<Sha256HMAC> m_hmac;
+    std::string m_serviceName;
+    std::string m_region;
+    std::set<std::string> m_unsignedHeaders;
+    std::unique_ptr<Sha256> m_hash;
+    std::unique_ptr<Sha256HMAC> m_hmac;
 };

@@ -14,11 +14,13 @@
 //
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
+#include "jdcloud_signer/util/DateTime.h"
 #include <time.h>
 #include <cassert>
 #include <iostream>
 #include <cstring>
-#include "jdcloud_signer/util/DateTime.h"
+
+using namespace std;
 
 static const char* RFC822_DATE_FORMAT_STR_WITH_Z = "%a, %d %b %Y %H:%M:%S %Z";
 static const char* ISO_8601_LONG_DATE_FORMAT_STR = "%Y-%m-%dT%H:%M:%SZ";
