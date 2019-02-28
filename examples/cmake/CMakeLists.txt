@@ -27,7 +27,8 @@ if(APPLE)
 endif(APPLE)
 
 pkg_check_modules(MAIN REQUIRED libjdcloud_signer)
+link_directories(${MAIN_LIBRARY_DIRS})
 
 add_executable(main main.cpp)
 target_include_directories(main PUBLIC ${MAIN_INCLUDE_DIRS})
-target_link_options(main PUBLIC ${MAIN_LDFLAGS})
+target_link_libraries(main PUBLIC ${MAIN_LIBRARIES})
