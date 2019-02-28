@@ -11,8 +11,8 @@ before_install:
 script:
   - cmake --version && pkg-config --version
   - cmake . && make && sudo make install
-  - cd examples/makefile && make
-  - cd examples/cmake && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig cmake . && make
+  - cd $TRAVIS_BUILD_DIR/examples/makefile && make
+  - cd $TRAVIS_BUILD_DIR/examples/cmake && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig cmake . && make
 dist: xenial
 addons:
   apt:
