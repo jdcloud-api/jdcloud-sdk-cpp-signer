@@ -27,13 +27,23 @@ class HMACRAIIGuard {
 public:
     HMACRAIIGuard()
     {
+#if OPENSSL_VERSION_NUMBER < 0x10100000L
         m_ctx = new HMAC_CTX;
+        HMAC_CTX_init(m_ctx);
+#else
+        m_ctx = HMAC_CTX_new();
+#endif
         assert(m_ctx != nullptr);
     }
 
     ~HMACRAIIGuard()
     {
+#if OPENSSL_VERSION_NUMBER < 0x10100000L
+        HMAC_CTX_cleanup(m_ctx);
         delete m_ctx;
+#else
+        HMAC_CTX_free(m_ctx);
+#endif
         m_ctx = nullptr;
     }
 
@@ -52,13 +62,10 @@ HashResult Sha256HMAC::Calculate(const string& toSign, const string& secret)
 
     HMACRAIIGuard guard;
     HMAC_CTX* m_ctx = guard.getResource();
-    HMAC_CTX_init(m_ctx);
 
     HMAC_Init_ex(m_ctx, secret.c_str(), static_cast<int>(secret.size()), EVP_sha256(), NULL);
     HMAC_Update(m_ctx, (unsigned char*)toSign.c_str(), toSign.size());
     HMAC_Final(m_ctx, digest, &length);
-
-    HMAC_CTX_cleanup(m_ctx);
 
     string result((const char*) digest, length);
     free(digest);
