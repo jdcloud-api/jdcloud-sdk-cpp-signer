@@ -24,6 +24,8 @@
 #include <ostream>
 #include <sstream>
 
+namespace jdcloud_signer {
+
 /**
  * Logger that formats log messages into [LEVEL] timestamp [threadid] message
  */
@@ -62,3 +64,5 @@ protected:
 private:
     std::atomic<LogLevel> m_logLevel;
 };
+
+}

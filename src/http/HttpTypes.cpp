@@ -16,6 +16,8 @@
 
 #include "jdcloud_signer/http/HttpTypes.h"
 
+namespace jdcloud_signer {
+
 namespace HttpMethodMapper
 {
     const char *GetNameForHttpMethod(HttpMethod httpMethod) {
@@ -36,4 +38,6 @@ namespace HttpMethodMapper
                 return "GET";
         }
     }
+}
+
 }

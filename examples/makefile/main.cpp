@@ -21,6 +21,7 @@
 #include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
 
 using namespace std;
+using namespace jdcloud_signer;
 
 void TestRequestWithoutBody() {
     ConsoleLogSystem* cls = new ConsoleLogSystem(LogLevel::Debug);

@@ -20,6 +20,8 @@
 #include <vector>
 #include <sstream>
 
+namespace jdcloud_signer {
+
 /**
  * All the things the c++ stdlib is missing for string operations that I needed.
  */
@@ -132,3 +134,5 @@ public:
     static double ConvertToDouble(const char* source);
 
 };
+
+}

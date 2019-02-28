@@ -20,6 +20,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 string HashingUtils::HexEncode(const unsigned char* message, size_t length)
 {
     std::stringstream ss;
@@ -31,4 +33,6 @@ string HashingUtils::HexEncode(const unsigned char* message, size_t length)
     }
 
     return ss.str();
+}
+
 }

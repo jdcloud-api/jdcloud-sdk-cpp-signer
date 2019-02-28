@@ -19,4 +19,8 @@
 #include <string>
 #include "Outcome.h"
 
+namespace jdcloud_signer {
+
 using HashResult = Outcome<std::string, bool>;
+
+}

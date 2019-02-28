@@ -16,6 +16,8 @@
 
 #pragma once
 
+namespace jdcloud_signer {
+
 /**
  * Template class representing the outcome of making a request.  It will contain
  * either a successful result or the failure error.  The caller must check
@@ -114,3 +116,5 @@ private:
     E error;
     bool success;
 };
+
+}

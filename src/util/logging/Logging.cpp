@@ -17,6 +17,8 @@
 #include "jdcloud_signer/util/logging/Logging.h"
 #include "jdcloud_signer/util/logging/LogSystemInterface.h"
 
+namespace jdcloud_signer {
+
 static std::shared_ptr<LogSystemInterface> LogSystem(nullptr);
 
 void InitializeLogging(const std::shared_ptr<LogSystemInterface> &logSystem) {
@@ -29,4 +31,6 @@ void ShutdownLogging(void) {
 
 LogSystemInterface *GetLogSystem() {
     return LogSystem.get();
+}
+
 }

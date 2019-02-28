@@ -27,6 +27,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 static const char* EQ = "=";
 static const char* SIGNATURE = "Signature";
 static const char* HMAC_SHA256 = "JDCLOUD2-HMAC-SHA256";
@@ -358,4 +360,6 @@ string JdcloudSigner::ComputeHash(const string& secretKey, const string& simpleD
         return {};
     }
     return hashResult.GetResult();
+}
+
 }

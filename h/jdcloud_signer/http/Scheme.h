@@ -16,6 +16,8 @@
 
 #pragma once
 
+namespace jdcloud_signer {
+
 /**
  * Enum representing URI scheme.
  */
@@ -36,3 +38,5 @@ namespace SchemeMapper
      */
     Scheme FromString(const char* name);
 } // namespace SchemeMapper
+
+}

@@ -28,6 +28,8 @@
 #include "jdcloud_signer/util/DateTime.h"
 #include "jdcloud_signer/http/HttpRequest.h"
 
+namespace jdcloud_signer {
+
 class JdcloudSigner
 {
 public:
@@ -56,3 +58,5 @@ private:
     std::unique_ptr<Sha256> m_hash;
     std::unique_ptr<Sha256HMAC> m_hmac;
 };
+
+}

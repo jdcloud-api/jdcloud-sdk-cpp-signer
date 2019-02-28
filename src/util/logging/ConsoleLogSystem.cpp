@@ -21,7 +21,11 @@
 
 using std::string;
 
+namespace jdcloud_signer {
+
 void ConsoleLogSystem::ProcessFormattedStatement(string&& statement)
 {
     std::cout << statement;
+}
+
 }

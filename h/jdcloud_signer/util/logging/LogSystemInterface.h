@@ -18,6 +18,8 @@
 
 #include <ostream>
 
+namespace jdcloud_signer {
+
 enum class LogLevel : int;
 
 /**
@@ -40,3 +42,5 @@ public:
     virtual void LogStream(LogLevel logLevel, const char* tag, const std::ostringstream &messageStream) = 0;
 
 };
+
+}

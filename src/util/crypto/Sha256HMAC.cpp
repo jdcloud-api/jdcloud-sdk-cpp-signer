@@ -21,6 +21,8 @@
 
 using namespace std;
 
+namespace jdcloud_signer {
+
 class HMACRAIIGuard {
 public:
     HMACRAIIGuard()
@@ -62,4 +64,6 @@ HashResult Sha256HMAC::Calculate(const string& toSign, const string& secret)
     free(digest);
 
     return HashResult(result);
+}
+
 }

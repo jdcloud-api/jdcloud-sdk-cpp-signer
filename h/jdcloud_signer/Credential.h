@@ -18,6 +18,8 @@
 
 #include <string>
 
+namespace jdcloud_signer {
+
 class Credential
 {
 public:
@@ -39,3 +41,5 @@ private:
     std::string m_accessKey;
     std::string m_secretKey;
 };
+
+}

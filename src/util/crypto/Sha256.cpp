@@ -20,6 +20,8 @@
 #include "jdcloud_signer/util/crypto/HashingUtils.h"
 #include "jdcloud_signer/util/logging/LogMacros.h"
 
+namespace jdcloud_signer {
+
 class OpensslCtxRAIIGuard
 {
 public:
@@ -100,4 +102,6 @@ HashResult Sha256::Calculate(std::istream& stream)
     std::string result = HashingUtils::HexEncode(hash, length);
     free(hash);
     return HashResult(result);
+}
+
 }
