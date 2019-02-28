@@ -20,6 +20,12 @@ set (Demo_VERSION_DEBUG 0)
 set(VERSION ${Demo_VERSION_MAJOR}.${Demo_VERSION_MINOR}.${Demo_VERSION_DEBUG})
 set(SOVERSION ${VERSION})
 
+if(APPLE)
+    set(PKGCONFIG_REQUIRES_PRIVATE "libcrypto")
+else(APPLE)
+    set(PKGCONFIG_REQUIRES_PRIVATE "libcrypto uuid")
+endif(APPLE)
+
 CONFIGURE_FILE(
     ${CMAKE_CURRENT_SOURCE_DIR}/libjdcloud_signer.pc.in
     ${CMAKE_CURRENT_BINARY_DIR}/libjdcloud_signer.pc
@@ -29,8 +35,6 @@ INSTALL(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/libjdcloud_signer.pc
     DESTINATION lib${LIB_SUFFIX}/pkgconfig
 )
-
-set(CMAKE_BUILD_TYPE "Release")
 
 if(WIN32)
     include_directories("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\include")
