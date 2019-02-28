@@ -57,6 +57,6 @@ HashResult Sha256HMAC::Calculate(const string& toSign, const string& secret)
 
     string result((const char*) digest, length);
     free(digest);
-     
+
     return HashResult(result);
 }

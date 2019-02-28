@@ -32,22 +32,22 @@ INSTALL(
 set(CMAKE_BUILD_TYPE "Release")
 
 if(WIN32)
-	include_directories("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\include")
-	link_libraries("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\lib\\libeay32.lib")
+    include_directories("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\include")
+    link_libraries("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\lib\\libeay32.lib")
 elseif(APPLE)
-	if (EXISTS /usr/local/opt/openssl)
-		set(OPENSSL_ROOT_DIR /usr/local/opt/openssl)
-		# list(APPEND CMAKE_PREFIX_PATH "/usr/local/opt/openssl")
-		# set(CMAKE_EXE_LINKER_FLAGS "-L/usr/local/opt/openssl/lib")
-		# include_directories(/usr/local/opt/openssl/include)
-	endif()
-	FIND_PACKAGE(OpenSSL)
-	link_libraries(OpenSSL::SSL)
+    if (EXISTS /usr/local/opt/openssl)
+        set(OPENSSL_ROOT_DIR /usr/local/opt/openssl)
+        # list(APPEND CMAKE_PREFIX_PATH "/usr/local/opt/openssl")
+        # set(CMAKE_EXE_LINKER_FLAGS "-L/usr/local/opt/openssl/lib")
+        # include_directories(/usr/local/opt/openssl/include)
+    endif()
+    FIND_PACKAGE(OpenSSL)
+    link_libraries(OpenSSL::SSL)
 elseif(UNIX)
-	include_directories(/usr/local/ssl/include)
-	link_libraries(ssl)
-	link_libraries(crypto)
-	link_libraries(uuid)
+    include_directories(/usr/local/ssl/include)
+    link_libraries(ssl)
+    link_libraries(crypto)
+    link_libraries(uuid)
 endif()
 
 aux_source_directory(. DIR_LIB_SRCS)
@@ -64,8 +64,8 @@ add_library(jdcloudsigner_static STATIC $<TARGET_OBJECTS:jdcloudsigner>)
 set_target_properties(jdcloudsigner_static PROPERTIES OUTPUT_NAME jdcloudsigner)
 
 install(TARGETS jdcloudsigner_shared
-	LIBRARY
-		DESTINATION lib)
+    LIBRARY
+        DESTINATION lib)
 install(TARGETS jdcloudsigner_static
-	ARCHIVE
-		DESTINATION lib)
+    ARCHIVE
+        DESTINATION lib)

@@ -33,7 +33,7 @@ public:
     virtual ~Sha256HMAC() {};
 
     /**
-    * Calculates a SHA256 HMAC digest (not hex encoded)
-    */
+     * Calculates a SHA256 HMAC digest (not hex encoded)
+     */
     HashResult Calculate(const string& toSign, const string& secret);
 };

@@ -168,12 +168,12 @@ string URI::URLEncodePath(const string& path)
 }
 
 void URI::SetPath(const string& value)
-{    
-   m_path = value;
+{
+    m_path = value;
 }
 
 //ugh, this isn't even part of the canonicalization spec. It is part of how our services have implemented their signers though....
-//it doesn't really hurt anything to reorder it though, so go ahead and sort the values for parameters with the same key 
+//it doesn't really hurt anything to reorder it though, so go ahead and sort the values for parameters with the same key
 void InsertValueOrderedParameter(QueryStringParameterCollection& queryParams, const string& key, const string& value)
 {
     auto entriesAtKey = queryParams.equal_range(key);
@@ -181,7 +181,7 @@ void InsertValueOrderedParameter(QueryStringParameterCollection& queryParams, co
     {
         if (entry->second > value)
         {
-            queryParams.emplace_hint(entry, key, value);            
+            queryParams.emplace_hint(entry, key, value);
             return;
         }
     }
@@ -255,7 +255,7 @@ void URI::CanonicalizeQueryString()
     if(m_queryString.find("=") != std::string::npos)
     {
         for (QueryStringParameterCollection::iterator iter = sortedParameters.begin();
-             iter != sortedParameters.end(); ++iter)
+            iter != sortedParameters.end(); ++iter)
         {
             if (!first)
             {
@@ -297,15 +297,15 @@ void URI::SetQueryString(const string& str)
     m_queryString = "";
 
     if (str.empty()) return;
-    
+
     if (str.front() != '?')
     {
         m_queryString.append("?").append(str);
     }
     else
     {
-       m_queryString = str;
-    }    
+        m_queryString = str;
+    }
 }
 
 string URI::GetURIString(bool includeQueryString) const

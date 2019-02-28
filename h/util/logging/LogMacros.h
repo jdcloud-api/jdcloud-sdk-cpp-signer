@@ -28,7 +28,7 @@
 
 #ifdef DISABLE_LOGGING
 
-    #define LOGSTREAM(level, tag, streamExpression) 
+    #define LOGSTREAM(level, tag, streamExpression)
     #define LOGSTREAM_FATAL(tag, streamExpression)
     #define LOGSTREAM_ERROR(tag, streamExpression)
     #define LOGSTREAM_WARN(tag, streamExpression)

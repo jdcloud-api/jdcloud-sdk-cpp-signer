@@ -24,7 +24,7 @@ static const char* RFC822_DATE_FORMAT_STR_WITH_Z = "%a, %d %b %Y %H:%M:%S %Z";
 static const char* ISO_8601_LONG_DATE_FORMAT_STR = "%Y-%m-%dT%H:%M:%SZ";
 
 DateTime::DateTime(const std::chrono::system_clock::time_point& timepointToAssign) : m_time(timepointToAssign), m_valid(true)
-{   
+{
 }
 
 DateTime::DateTime(int64_t millisSinceEpoch) : m_valid(true)
@@ -113,7 +113,7 @@ string DateTime::ToLocalTimeString(DateFormat format) const
     case DateFormat::ISO_8601:
         return ToLocalTimeString(ISO_8601_LONG_DATE_FORMAT_STR);
     case DateFormat::RFC822:
-        return ToLocalTimeString(RFC822_DATE_FORMAT_STR_WITH_Z);   
+        return ToLocalTimeString(RFC822_DATE_FORMAT_STR_WITH_Z);
     default:
         assert(0);
         return "";
@@ -130,7 +130,7 @@ string DateTime::ToLocalTimeString(const char* formatStr) const
 }
 
 string DateTime::ToGmtString(const char* formatStr) const
-{    
+{
     struct tm gmtTimeStamp = ConvertTimestampToGmtStruct();
 
     char formattedString[100];
@@ -183,7 +183,7 @@ tm DateTime::ConvertTimestampToLocalTimeStruct() const
     std::time_t time = std::chrono::system_clock::to_time_t(m_time);
     struct tm localTimeStamp;
 #ifdef WIN32
-	localtime_s(&localTimeStamp, &time);
+    localtime_s(&localTimeStamp, &time);
 #else
     localtime_r(&time, &localTimeStamp);
 #endif
@@ -196,7 +196,7 @@ tm DateTime::ConvertTimestampToGmtStruct() const
     std::time_t time = std::chrono::system_clock::to_time_t(m_time);
     struct tm gmtTimeStamp;
 #ifdef WIN32
-	localtime_s(&gmtTimeStamp, &time);
+    localtime_s(&gmtTimeStamp, &time);
 #else
     gmtime_r(&time, &gmtTimeStamp);
 #endif

@@ -32,8 +32,7 @@ namespace SchemeMapper
      */
     const char* ToString(Scheme scheme);
     /**
-    * Converts a string instance to a Scheme. Defaults to https.
-    */
+     * Converts a string instance to a Scheme. Defaults to https.
+     */
     Scheme FromString(const char* name);
 } // namespace SchemeMapper
-

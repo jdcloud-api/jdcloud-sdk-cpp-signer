@@ -1,6 +1,6 @@
 install(FILES
     JdcloudSigner.h Credential.h
-    DESTINATION include    
+    DESTINATION include
 )
 
 install(DIRECTORY

@@ -131,18 +131,18 @@ static string CanonicalizeRequestSigningString(HttpRequest& request, bool urlEsc
 #ifdef WIN32
 static string GetUUID()
 {
-	GUID guid;
-	char buf[64] = { 0 };
-	CoCreateGuid(&guid);
-	_snprintf_s(buf,
-		sizeof(buf),
-		"{%08X%04X%04X%2X%02X%02X%02X%02X%02X%02X%02X}",
-		guid.Data1, guid.Data2, guid.Data3,
-		guid.Data4[0], guid.Data4[1],
-		guid.Data4[2], guid.Data4[3],
-		guid.Data4[4], guid.Data4[5],
-		guid.Data4[6], guid.Data4[7]);
-	return std::string(buf);
+    GUID guid;
+    char buf[64] = { 0 };
+    CoCreateGuid(&guid);
+    _snprintf_s(buf,
+        sizeof(buf),
+        "{%08X%04X%04X%2X%02X%02X%02X%02X%02X%02X%02X}",
+        guid.Data1, guid.Data2, guid.Data3,
+        guid.Data4[0], guid.Data4[1],
+        guid.Data4[2], guid.Data4[3],
+        guid.Data4[4], guid.Data4[5],
+        guid.Data4[6], guid.Data4[7]);
+    return std::string(buf);
 }
 #else
 static string GetUUID()
@@ -231,8 +231,8 @@ bool JdcloudSigner::SignRequest(HttpRequest& request) const
 
     stringstream ss;
     ss << HMAC_SHA256 << " " << CREDENTIAL << EQ << m_credential.GetAccessKey() << "/" << simpleDate
-       << "/" << m_region << "/" << m_serviceName << "/" << JDCLOUD_REQUEST << ", " << SIGNED_HEADERS << EQ
-       << signedHeadersValue << ", " << SIGNATURE << EQ << finalSignature;
+        << "/" << m_region << "/" << m_serviceName << "/" << JDCLOUD_REQUEST << ", " << SIGNED_HEADERS << EQ
+        << signedHeadersValue << ", " << SIGNATURE << EQ << finalSignature;
 
     auto authString = ss.str();
     LOGSTREAM_DEBUG(logTag, "Signing request with: " << authString);
@@ -278,13 +278,13 @@ string JdcloudSigner::ComputePayloadHash(HttpRequest& request) const
 
 
 string JdcloudSigner::GenerateStringToSign(const string& dateValue, const string& simpleDate,
-                                           const string& canonicalRequestHash, const string& region, const string& serviceName) const
+                                            const string& canonicalRequestHash, const string& region, const string& serviceName) const
 {
     //generate the actual string we will use in signing the final request.
     stringstream ss;
 
     ss << HMAC_SHA256 << NEWLINE << dateValue << NEWLINE << simpleDate << "/" << region << "/"
-       << serviceName << "/" << JDCLOUD_REQUEST << NEWLINE << canonicalRequestHash;
+        << serviceName << "/" << JDCLOUD_REQUEST << NEWLINE << canonicalRequestHash;
 
     return ss.str();
 }
@@ -319,7 +319,7 @@ string JdcloudSigner::GenerateSignature(const string& stringToSign, const string
 }
 
 string JdcloudSigner::ComputeHash(const string& secretKey, const string& simpleDate, const string& region,
-                                  const string& serviceName) const
+                                const string& serviceName) const
 {
     string signingKey(SIGNING_KEY);
     signingKey.append(secretKey);

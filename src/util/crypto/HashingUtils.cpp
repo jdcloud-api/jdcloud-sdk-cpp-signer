@@ -25,7 +25,7 @@ string HashingUtils::HexEncode(const unsigned char* message, size_t length)
     for (unsigned i = 0; i < length; ++i)
     {
         ss << std::hex << std::setw(2) << std::setfill('0')
-           << (unsigned int) message[i];
+            << (unsigned int) message[i];
     }
 
     return ss.str();

@@ -37,8 +37,8 @@ public:
      */
     virtual LogLevel GetLogLevel(void) const = 0;
     /**
-    * Writes the stream to the output stream.
-    */
+     * Writes the stream to the output stream.
+     */
     virtual void LogStream(LogLevel logLevel, const char* tag, const ostringstream &messageStream) = 0;
 
 };

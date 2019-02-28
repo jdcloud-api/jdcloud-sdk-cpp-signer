@@ -25,52 +25,52 @@ using std::vector;
 using std::stringstream;
 
 /**
-* All the things the c++ stdlib is missing for string operations that I needed.
-*/
+ * All the things the c++ stdlib is missing for string operations that I needed.
+ */
 class StringUtils
 {
 public:
     static void Replace(string& s, const char* search, const char* replace);
-    
+
     /**
-    * Converts a string to lower case.
-    */
+     * Converts a string to lower case.
+     */
     static string ToLower(const char* source);
 
 
     /**
-    * Converts a string to upper case.
-    */
+     * Converts a string to upper case.
+     */
     static string ToUpper(const char* source);
 
 
     /**
-    * Does a caseless comparison of two strings.
-    */
+     * Does a caseless comparison of two strings.
+     */
     static bool CaselessCompare(const char* value1, const char* value2);
 
 
     /**
-    * URL encodes a string (uses %20 not + for spaces).
-    */
+     * URL encodes a string (uses %20 not + for spaces).
+     */
     static string URLEncode(const char* unsafe);
 
     /**
-    * Http Clients tend to escape some characters but not all. Escaping all of them causes problems, because the client
-    * will also try to escape them.
-    * So this only escapes non-ascii characters and the + character
-    */
+     * Http Clients tend to escape some characters but not all. Escaping all of them causes problems, because the client
+     * will also try to escape them.
+     * So this only escapes non-ascii characters and the + character
+     */
     static string UTF8Escape(const char* unicodeString, const char* delimiter);
 
     /**
-    * URL encodes a double (if it ends up going to scientific notation) otherwise it just returns it as a string.
-    */
+     * URL encodes a double (if it ends up going to scientific notation) otherwise it just returns it as a string.
+     */
     static string URLEncode(double unsafe);
 
 
     /**
-    * Decodes a URL encoded string (will handle both encoding schemes for spaces).
-    */
+     * Decodes a URL encoded string (will handle both encoding schemes for spaces).
+     */
     static string URLDecode(const char* safe);
 
     /**
@@ -90,8 +90,8 @@ public:
 
 
     /**
-    * Splits a string on new line characters.
-    */
+     * Splits a string on new line characters.
+     */
     static vector<string> SplitOnLine(const string& toSplit);
 
 
@@ -124,7 +124,7 @@ public:
     static long ConvertToInt32(const char* source);
 
 
-    /** 
+    /**
      * convert to bool
      */
     static bool ConvertToBool(const char* source);

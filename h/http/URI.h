@@ -39,16 +39,16 @@ class URI
 {
 public:
     /**
-      * Defaults to http and port 80
-      */
+     * Defaults to http and port 80
+     */
     URI();
     /**
-      * Parses string and sets uri fields
-      */
+     * Parses string and sets uri fields
+     */
     URI(const string&);
     /**
-      * Parses string and sets uri fields
-      */
+     * Parses string and sets uri fields
+     */
     URI(const char*);
 
     URI& operator = (const string&);
@@ -62,55 +62,55 @@ public:
     bool operator != (const char*) const;
 
     /**
-    * scheme or protocol e.g. http, https, ftp
-    */
+     * scheme or protocol e.g. http, https, ftp
+     */
     inline Scheme GetScheme() const { return m_scheme; }
 
     /**
-    * Sets scheme, if the port is incompaitible with this scheme, the port will automatically be set as well.
-    */
+     * Sets scheme, if the port is incompaitible with this scheme, the port will automatically be set as well.
+     */
     void SetScheme(Scheme value);
 
     /**
-    * Gets the domain portion of the uri
-    */
+     * Gets the domain portion of the uri
+     */
     inline const string& GetAuthority() const { return m_authority; }
 
     /**
-    * Sets the domain portion of the uri
-    */
+     * Sets the domain portion of the uri
+     */
     inline void SetAuthority(const string& value) { m_authority = value; }
 
     /**
-    * Gets the port portion of the uri, defaults to 22 for ftp, 80 for http and 443 for https
-    */
+     * Gets the port portion of the uri, defaults to 22 for ftp, 80 for http and 443 for https
+     */
     inline uint16_t GetPort() const { return m_port; }
 
     /**
-    * Sets the port portion of the uri, normally you will not have to do this. If the scheme is set to ftp, http
-    * or https then the default ports will be set.
-    */
+     * Sets the port portion of the uri, normally you will not have to do this. If the scheme is set to ftp, http
+     * or https then the default ports will be set.
+     */
     inline void SetPort(uint16_t value) { m_port = value; }
 
     /**
-    * Gets the path portion of the uri e.g. the portion after the first slash after the authority and prior to the
-    * query string. This is not url encoded.
-    */
+     * Gets the path portion of the uri e.g. the portion after the first slash after the authority and prior to the
+     * query string. This is not url encoded.
+     */
     inline const string& GetPath() const { return m_path; }
 
     /**
-    * Gets the path portion of the uri, url encodes it and returns it
-    */
+     * Gets the path portion of the uri, url encodes it and returns it
+     */
     inline string GetURLEncodedPath() const { return URLEncodePath(m_path); }
 
     /**
-    * Sets the path portion of the uri. URL encodes it if needed
-    */
+     * Sets the path portion of the uri. URL encodes it if needed
+     */
     void SetPath(const string& value);
 
     /**
-    * Gets the raw query string including the ?
-    */
+     * Gets the raw query string including the ?
+     */
     inline const string& GetQueryString() const { return m_queryString; }
 
     /**
@@ -121,29 +121,29 @@ public:
     string GetFormParameters() const;
 
     /**
-    * Cannonicalizes the query string.
-    */
+     * Cannonicalizes the query string.
+     */
     void CanonicalizeQueryString();
 
     /**
-    * parses query string and returns url decoded key/value mappings from it. Spaces and all url encoded
-    * values will not be encoded.
-    */
+     * parses query string and returns url decoded key/value mappings from it. Spaces and all url encoded
+     * values will not be encoded.
+     */
     QueryStringParameterCollection GetQueryStringParameters(bool decode = true) const;
 
     /**
-    * Adds query string parameter to underlying query string.
-    */
+     * Adds query string parameter to underlying query string.
+     */
     void AddQueryStringParameter(const char* key, const string& value);
 
     /**
-    * Adds multiple query string parameters to underlying query string.
-    */
+     * Adds multiple query string parameters to underlying query string.
+     */
     void AddQueryStringParameter(const map<string, string>& queryStringPairs);
 
     /**
-    * Converts the URI to a String usable for its context. e.g. an http request.
-    */
+     * Converts the URI to a String usable for its context. e.g. an http request.
+     */
     string GetURIString(bool includeQueryString = true) const;
 
     /**
