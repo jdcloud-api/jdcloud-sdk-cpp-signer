@@ -1,7 +1,7 @@
 # 京东云 C++ 签名库
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/95b764853f0d4660916c3f1f9a4c5749)](https://app.codacy.com/app/lidaobing/jdcloud-sdk-cpp-signer?utm_source=github.com&utm_medium=referral&utm_content=jdcloud-api/jdcloud-sdk-cpp-signer&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer.svg?branch=master)](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/95b764853f0d4660916c3f1f9a4c5749)](https://app.codacy.com/app/lidaobing/jdcloud-sdk-cpp-signer?utm_source=github.com&utm_medium=referral&utm_content=jdcloud-api/jdcloud-sdk-cpp-signer&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/jdcloud-api/jdcloud-sdk-cpp-signer/badge)](https://www.codefactor.io/repository/github/jdcloud-api/jdcloud-sdk-cpp-signer)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -42,75 +42,37 @@
 - 把返回的HttpRequest对象中Header的Authorization、x-jdcloud-date、x-jdcloud-nonce三项及其值放到您的真实请求Header中
 - 然后向京东云OpenAPI网关发起调用
 
-## Linux（Ubuntu）
-### 安装方法
-1)	安装开发依赖库
+## 安装方法
+### Linux（Ubuntu）
+1. 安装开发依赖库
 ```
 sudo apt-get install g++ cmake libssl-dev uuid-dev
 ```
-2)	从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
+2. 从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
 
-### 使用方法
-1)	新建项目工程目录
-2)	编写cmake文件，参考Demo中的例子，引用头文件
-```
-include_directories(${PROJECT_SOURCE_DIR}/h)
-include_directories(${PROJECT_SOURCE_DIR}/http)
-include_directories(${PROJECT_SOURCE_DIR}/util)
-include_directories(${PROJECT_SOURCE_DIR}/util/crypto)
-include_directories(${PROJECT_SOURCE_DIR}/util/logging)
-```
-3)	引用静态库
-```
-link_libraries(${PROJECT_SOURCE_DIR}/libjdcloudsigner.a)
-link_libraries(ssl)
-link_libraries(crypto)
-link_libraries(uuid)
-```
-4)	参考Demo中的main.cpp，调用签名接口.详细请见"调用方法"小节。
-5)	编译链接
-```
-cmake .
-make
+### MacOS
+
+1. 安装 [homebrew](https://brew.sh/index_zh-cn)
+2. 运行如下脚本
+
+```sh
+brew tap jdcloud-api/tap
+brew install libjdcloud_signer --HEAD
 ```
 
-## macOS
-### 安装方法
-1)	安装cmake3.5以上版本
-```
-brew install cmake
-```
-2)	从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
-
-### 使用方法
-1)	新建项目工程目录
-2)	编写cmake文件，参考Demo中的例子，引用头文件
-```
-include_directories(${PROJECT_SOURCE_DIR}/h)
-include_directories(${PROJECT_SOURCE_DIR}/http)
-include_directories(${PROJECT_SOURCE_DIR}/util)
-include_directories(${PROJECT_SOURCE_DIR}/util/crypto)
-include_directories(${PROJECT_SOURCE_DIR}/util/logging)
-```
-3)	引用静态库（其中ssl库为mac系统自带，不用安装）
-```
-link_libraries(${PROJECT_SOURCE_DIR}/libjdcloudsigner.a)
-link_libraries(ssl)
-link_libraries(crypto)
-```
-4)	参考Demo中的main.cpp，调用签名接口。详细请见"调用方法"小节。
-5)	编译链接
-```
-cmake .
-make
-```
-## Windows
-### 安装方法
+### Windows
 1)	Visual Stdio 2015以上版本，官方地址为：https://visualstudio.microsoft.com/
 2)	CMake 3.5以上版本，官方地址为：https://cmake.org/
 3)	从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
 
-### 使用方法
+## 使用方法
+
+### Linux/MacOS
+
+* 请参考 [examples](./examples)
+
+### Windows
+
 1)	新建项目工程目录
 2)	编写cmake文件，参考Demo中的例子，引用头文件
 ```
@@ -136,7 +98,8 @@ devenv Demo.sln /build
 
 使用Visual Studio打开Demo.sln解决方案，编译。
 
-## 调用方法
+### 调用方法
+
 ```cpp
 // 引用头文件
 #include "jdcloud_signer/Credential.h"
@@ -176,7 +139,8 @@ else
 }
 ```
 
-## 使用 openssl 1.1 编译
+## FAQ
+### 如何使用 openssl 1.1 编译？
 
 ### Ubuntu 18.04
 
