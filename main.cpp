@@ -18,8 +18,8 @@
 #include "jdcloud_signer/JdcloudSigner.h"
 #include "jdcloud_signer/http/HttpTypes.h"
 #include "jdcloud_signer/http/HttpRequest.h"
-#include "jdcloud_signer/util/logging/Logging.h"
-#include "jdcloud_signer/util/logging/ConsoleLogSystem.h"
+#include "jdcloud_signer/logging/Logging.h"
+#include "jdcloud_signer/logging/ConsoleLogSystem.h"
 
 using namespace std;
 using namespace jdcloud_signer;

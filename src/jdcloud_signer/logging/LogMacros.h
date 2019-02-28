@@ -16,9 +16,9 @@
 
 #pragma once
 
-#include "jdcloud_signer/util/logging/LogLevel.h"
-#include "jdcloud_signer/util/logging/Logging.h"
-#include "jdcloud_signer/util/logging/LogSystemInterface.h"
+#include "jdcloud_signer/logging/LogLevel.h"
+#include "jdcloud_signer/logging/Logging.h"
+#include "jdcloud_signer/logging/LogSystemInterface.h"
 
 namespace jdcloud_signer {
 

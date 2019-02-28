@@ -51,7 +51,7 @@ aux_source_directory(. DIR_LIB_SRCS)
 aux_source_directory(http DIR_LIB_SRCS)
 aux_source_directory(util DIR_LIB_SRCS)
 aux_source_directory(util/crypto DIR_LIB_SRCS)
-aux_source_directory(util/logging DIR_LIB_SRCS)
+aux_source_directory(logging DIR_LIB_SRCS)
 
 add_library(jdcloudsigner OBJECT ${DIR_LIB_SRCS})
 target_include_directories(jdcloudsigner PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -18,7 +18,7 @@
 #include <openssl/sha.h>
 #include <openssl/evp.h>
 #include "jdcloud_signer/util/crypto/HashingUtils.h"
-#include "jdcloud_signer/util/logging/LogMacros.h"
+#include "jdcloud_signer/logging/LogMacros.h"
 
 namespace jdcloud_signer {
 
