@@ -8,7 +8,7 @@ using namespace std;
 TEST(JdcloudSignerImpl, SignRequest) {
     Credential credential("ak", "sk");
     JdcloudSignerImpl signer(credential, "vm", "cn-north-1");
-    DateTime now(1234567890000ll);
+    DateTime now(INT64_C(1234567890000));
     string uuid("uuid");
     HttpRequest request("http://vm.cn-north-1.jdcloud.net/", HttpMethod::HTTP_GET);
     bool result = signer.SignRequest(request, now, uuid);
