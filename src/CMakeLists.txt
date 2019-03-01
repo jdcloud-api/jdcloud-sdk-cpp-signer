@@ -77,3 +77,12 @@ install(TARGETS jdcloudsigner_shared
 install(TARGETS jdcloudsigner_static
     ARCHIVE
         DESTINATION lib)
+
+add_executable(jdcloud_signer_test
+    tests/TestMain.cpp
+    tests/Sha256Test.cpp
+)
+target_link_libraries(jdcloud_signer_test PUBLIC gtest jdcloudsigner)
+target_include_directories(jdcloud_signer_test PRIVATE "${CMAKE_SOURCE_DIR}/internal")
+add_test(NAME jdcloud_signer_test COMMAND jdcloud_signer_test)
+

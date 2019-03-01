@@ -17,5 +17,7 @@ project(Demo)
 
 set(CMAKE_CXX_STANDARD 11)
 
+enable_testing()
 add_subdirectory(include)
 add_subdirectory(src)
+add_subdirectory(vendor)

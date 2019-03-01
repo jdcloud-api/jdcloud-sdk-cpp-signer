@@ -14,3 +14,5 @@ install_manifest.txt
 *.o
 .vscode
 examples/cmake/main
+src/jdcloud_signer_test
+Testing
