@@ -26,7 +26,6 @@ namespace jdcloud_signer {
 class ConsoleLogSystem : public FormattedLogSystem
 {
 public:
-
     using Base = FormattedLogSystem;
 
     ConsoleLogSystem(LogLevel logLevel) :
@@ -36,8 +35,7 @@ public:
     virtual ~ConsoleLogSystem() {}
 
 protected:
-
-    virtual void ProcessFormattedStatement(std::string&& statement) override;
+    void ProcessFormattedStatement(std::string&& statement) override;
 };
 
 }

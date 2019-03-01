@@ -50,6 +50,7 @@ public:
     HMAC_CTX* getResource() {
         return m_ctx;
     }
+
 private:
     HMAC_CTX *m_ctx;
 };

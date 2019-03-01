@@ -43,7 +43,7 @@ public:
     /**
      * Gets the currently configured log level.
      */
-    virtual LogLevel GetLogLevel(void) const override { return m_logLevel; }
+    LogLevel GetLogLevel(void) const override { return m_logLevel; }
     /**
      * Set a new log level. This has the immediate effect of changing the log output to the new level.
      */
@@ -52,7 +52,7 @@ public:
     /**
      * Writes the stream to ProcessFormattedStatement.
      */
-    virtual void LogStream(LogLevel logLevel, const char* tag, const std::ostringstream &messageStream) override;
+    void LogStream(LogLevel logLevel, const char* tag, const std::ostringstream &messageStream) override;
 
 protected:
     /**

@@ -132,7 +132,6 @@ public:
      * convert to double
      */
     static double ConvertToDouble(const char* source);
-
 };
 
 }

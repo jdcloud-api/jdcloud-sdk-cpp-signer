@@ -40,7 +40,6 @@ public:
      * Writes the stream to the output stream.
      */
     virtual void LogStream(LogLevel logLevel, const char* tag, const std::ostringstream &messageStream) = 0;
-
 };
 
 }
