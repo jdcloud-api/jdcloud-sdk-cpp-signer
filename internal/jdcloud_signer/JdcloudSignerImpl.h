@@ -38,6 +38,7 @@ public:
     virtual ~JdcloudSignerImpl();
 
     bool SignRequest(HttpRequest& request) const;
+    bool SignRequest(HttpRequest& request, const DateTime& now, const std::string& uuid) const;
 
 private:
     bool ShouldSignHeader(const std::string& header) const;
