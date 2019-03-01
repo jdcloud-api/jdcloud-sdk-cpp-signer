@@ -23,9 +23,7 @@ namespace jdcloud_signer {
 class HashingUtils
 {
 public:
-
     static std::string HexEncode(const unsigned char* message, size_t length);
-
 };
 
 }

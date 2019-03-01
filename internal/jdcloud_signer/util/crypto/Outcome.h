@@ -28,7 +28,6 @@ template<typename R, typename E> // Result, Error
 class Outcome
 {
 public:
-
     Outcome() : success(false)
     {
     } // Default constructor
