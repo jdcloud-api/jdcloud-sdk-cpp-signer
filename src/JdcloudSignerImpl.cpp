@@ -162,6 +162,14 @@ static string GetUUID()
 
 bool JdcloudSignerImpl::SignRequest(HttpRequest& request) const
 {
+    DateTime now = GetSigningTimestamp();
+    auto uuid = GetUUID();
+    return SignRequest(request, now, uuid);
+}
+
+
+bool JdcloudSignerImpl::SignRequest(HttpRequest& request, const DateTime& now, const string& uuid) const
+{
     //don't sign anonymous requests
     if (m_credential.GetAccessKey().empty() || m_credential.GetSecretKey().empty())
     {
@@ -176,10 +184,9 @@ bool JdcloudSignerImpl::SignRequest(HttpRequest& request) const
     }
 
     //calculate date header to use in internal signature (this also goes into date header).
-    DateTime now = GetSigningTimestamp();
     string dateHeaderValue = now.ToGmtString(LONG_DATE_FORMAT_STR);
     request.SetHeaderValue(DATE_HEADER, dateHeaderValue);
-    request.SetHeaderValue(NONCE_HEADER, GetUUID());
+    request.SetHeaderValue(NONCE_HEADER, uuid);
 
     std::stringstream headersStream;
     std::stringstream signedHeadersStream;
