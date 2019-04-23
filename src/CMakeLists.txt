@@ -1,4 +1,4 @@
-# Copyright 2018 JDCLOUD.COM
+# Copyright 2018,2019 JDCLOUD.COM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -46,9 +46,10 @@ elseif(APPLE)
     FIND_PACKAGE(OpenSSL)
     link_libraries(OpenSSL::Crypto)
 elseif(UNIX)
-    include_directories(/usr/local/ssl/include)
-    link_libraries(crypto)
-    link_libraries(uuid)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(depends REQUIRED ${PKGCONFIG_REQUIRES_PRIVATE})
+    link_libraries(${depends_LIBRARIES})
+    include_directories(${depends_INCLUDE_DIRS})
 endif()
 
 aux_source_directory(. DIR_LIB_SRCS)

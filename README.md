@@ -45,7 +45,7 @@
 ### Linux（Ubuntu）
 1. 安装开发依赖库
 ```
-sudo apt-get install g++ cmake libssl-dev uuid-dev
+sudo apt-get install g++ cmake pkg-config libssl-dev uuid-dev
 ```
 2. 从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
 
