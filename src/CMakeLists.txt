@@ -20,6 +20,12 @@ set (Demo_VERSION_DEBUG 0)
 set(VERSION ${Demo_VERSION_MAJOR}.${Demo_VERSION_MINOR}.${Demo_VERSION_DEBUG})
 set(SOVERSION ${VERSION})
 
+if(APPLE)
+    set(PKGCONFIG_REQUIRES_PRIVATE "libcrypto")
+else(APPLE)
+    set(PKGCONFIG_REQUIRES_PRIVATE "libcrypto uuid")
+endif(APPLE)
+
 CONFIGURE_FILE(
     ${CMAKE_CURRENT_SOURCE_DIR}/libjdcloud_signer.pc.in
     ${CMAKE_CURRENT_BINARY_DIR}/libjdcloud_signer.pc
@@ -41,7 +47,7 @@ elseif(APPLE)
     link_libraries(OpenSSL::Crypto)
 elseif(UNIX)
     find_package(PkgConfig REQUIRED)
-    pkg_check_modules(depends REQUIRED libcrypto uuid)
+    pkg_check_modules(depends REQUIRED ${PKGCONFIG_REQUIRES_PRIVATE})
     link_libraries(${depends_LIBRARIES})
     include_directories(${depends_INCLUDE_DIRS})
 endif()
