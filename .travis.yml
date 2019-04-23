@@ -5,9 +5,6 @@ os:
 compiler:
   - gcc
   - clang
-before_install:
-  - '[ "$TRAVIS_OS_NAME" != osx ] || brew update'
-  - '[ "$TRAVIS_OS_NAME" != osx ] || brew upgrade cmake'
 script:
   - cmake --version && pkg-config --version
   - cmake . && make && make test && sudo make install
