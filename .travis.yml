@@ -11,7 +11,7 @@ script:
   - cd $TRAVIS_BUILD_DIR/examples/makefile && make
   - cd $TRAVIS_BUILD_DIR/examples/cmake && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig cmake . && make
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew install meson'
-  - cd $TRAVIS_BUILD_DIR/examples/meson && mkdir -p build && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig meson build && cd build && ninja
+  - cd $TRAVIS_BUILD_DIR/examples/meson && mkdir -p build && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig meson build && ninja -v -C build
 dist: xenial
 addons:
   apt:
