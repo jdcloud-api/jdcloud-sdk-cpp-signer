@@ -10,7 +10,7 @@ script:
   - cmake . && make && make test && sudo make install
   - cd $TRAVIS_BUILD_DIR/examples/makefile && make
   - cd $TRAVIS_BUILD_DIR/examples/cmake && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig cmake . && make
-  - cd $TRAVIS_BUILD_DIR/examples/meson && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig meson build && cd build && ninja
+  - cd $TRAVIS_BUILD_DIR/examples/meson && mkdir -p build && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig meson build && cd build && ninja
 dist: xenial
 addons:
   apt:
