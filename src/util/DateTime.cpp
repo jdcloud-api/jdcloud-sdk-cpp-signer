@@ -129,7 +129,7 @@ string DateTime::ToLocalTimeString(const char* formatStr) const
     struct tm localTimeStamp = ConvertTimestampToLocalTimeStruct();
 
     char formattedString[100];
-    std::strftime(formattedString, sizeof(formattedString), formatStr, &localTimeStamp);
+    strftime(formattedString, sizeof(formattedString), formatStr, &localTimeStamp);
     return formattedString;
 }
 
@@ -138,7 +138,7 @@ string DateTime::ToGmtString(const char* formatStr) const
     struct tm gmtTimeStamp = ConvertTimestampToGmtStruct();
 
     char formattedString[100];
-    std::strftime(formattedString, sizeof(formattedString), formatStr, &gmtTimeStamp);
+    strftime(formattedString, sizeof(formattedString), formatStr, &gmtTimeStamp);
     return formattedString;
 }
 
@@ -184,7 +184,7 @@ tm DateTime::GetTimeStruct(bool localTime) const
 
 tm DateTime::ConvertTimestampToLocalTimeStruct() const
 {
-    std::time_t time = std::chrono::system_clock::to_time_t(m_time);
+    time_t time = std::chrono::system_clock::to_time_t(m_time);
     struct tm localTimeStamp;
 #ifdef WIN32
     localtime_s(&localTimeStamp, &time);
@@ -197,7 +197,7 @@ tm DateTime::ConvertTimestampToLocalTimeStruct() const
 
 tm DateTime::ConvertTimestampToGmtStruct() const
 {
-    std::time_t time = std::chrono::system_clock::to_time_t(m_time);
+    time_t time = std::chrono::system_clock::to_time_t(m_time);
     struct tm gmtTimeStamp;
 #ifdef WIN32
     localtime_s(&gmtTimeStamp, &time);
