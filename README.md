@@ -56,6 +56,9 @@ sudo apt-get install g++ cmake pkg-config libssl-dev uuid-dev
 
 ```sh
 brew tap jdcloud-api/tap
+# 稳定版
+brew install libjdcloud_signer
+# git head 版
 brew install libjdcloud_signer --HEAD
 ```
 
