@@ -64,10 +64,7 @@ brew install libjdcloud_signer --HEAD
 2. 安装CMake 3.5以上版本，官方地址为：https://cmake.org/
 3. 在下载代码目录中执行`cmake .`
 4. 下载openssl库并安装，地址：http://slproweb.com/products/Win32OpenSSL.html
-5. 下载pthread库并解压，从Pre-built.2\lib目录中复制相应版本的pthreadVC2.lib到VisualStudio默认库路径下，并更名为pthread.lib。
-    下载地址：ftp://sourceware.org/pub/pthreads-win32
-    VS默认库路径如：C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\lib\x64
-6. 使用Visual Studio打开Demo.sln解决方案，编译。生成路径为：src/Debug。
+5. 使用Visual Studio打开Demo.sln解决方案，编译。生成路径为：src/Debug。
 ## 使用方法
 
 * 请参考 [examples](./examples)
