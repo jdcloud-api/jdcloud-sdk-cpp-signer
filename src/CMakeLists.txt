@@ -37,8 +37,8 @@ INSTALL(
 )
 
 if(WIN32)
-    include_directories("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\include")
-    link_libraries("C:\\Users\\Administrator\\Downloads\\openssl-OpenSSL_1_0_2n\\build\\lib\\libeay32.lib")
+    FIND_PACKAGE(OpenSSL)
+    link_libraries(OpenSSL::Crypto)
 elseif(APPLE)
     if (NOT OPENSSL_ROOT_DIR AND EXISTS /usr/local/opt/openssl)
         set(OPENSSL_ROOT_DIR /usr/local/opt/openssl)

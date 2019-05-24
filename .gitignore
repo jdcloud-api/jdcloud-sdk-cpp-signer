@@ -17,4 +17,11 @@ examples/cmake/main
 examples/meson/build
 src/jdcloud_signer_test
 Testing
+*.filters
+*.vcxproj
+*.sln
+*/Debug/
+*.dir
+*.swp
+*.user
 build
