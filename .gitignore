@@ -24,3 +24,4 @@ Testing
 *.dir
 *.swp
 *.user
+build
