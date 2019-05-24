@@ -60,40 +60,17 @@ brew install libjdcloud_signer --HEAD
 ```
 
 ### Windows
-1)	Visual Stdio 2015以上版本，官方地址为：https://visualstudio.microsoft.com/
-2)	CMake 3.5以上版本，官方地址为：https://cmake.org/
-3)	从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
-
+1. 安装Visual Stdio 2015以上版本，官方地址为：https://visualstudio.microsoft.com/
+2. 安装CMake 3.5以上版本，官方地址为：https://cmake.org/
+3. 在下载代码目录中执行`cmake .`
+4. 下载openssl库并安装，地址：http://slproweb.com/products/Win32OpenSSL.html
+5. 下载pthread库并解压，从Pre-built.2\lib目录中复制相应版本的pthreadVC2.lib到VisualStudio默认库路径下，并更名为pthread.lib。
+    下载地址：ftp://sourceware.org/pub/pthreads-win32
+    VS默认库路径如：C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.20.27508\lib\x64
+6. 使用Visual Studio打开Demo.sln解决方案，编译。生成路径为：src/Debug。
 ## 使用方法
 
-### Linux/MacOS
-
 * 请参考 [examples](./examples)
-
-### Windows
-
-1)	新建项目工程目录
-2)	编写cmake文件，参考Demo中的例子，引用头文件
-```
-include_directories(${PROJECT_SOURCE_DIR}/h)
-include_directories(${PROJECT_SOURCE_DIR}/http)
-include_directories(${PROJECT_SOURCE_DIR}/logging)
-```
-3)	引用静态库
-```
-link_libraries(${PROJECT_SOURCE_DIR}/jdcloudsigner.lib)
-link_libraries(${PROJECT_SOURCE_DIR}/libeay32.lib)
-```
-4)	参考Demo中的main.cpp，调用签名接口。详细请见"调用方法"小节。
-5)	编译链接
-
-打开Visual Studio 开发人员命令提示符，执行
-```
-cmake .
-devenv Demo.sln /build
-```
-
-使用Visual Studio打开Demo.sln解决方案，编译。
 
 ### 调用方法
 
