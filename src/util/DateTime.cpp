@@ -15,7 +15,7 @@
 // NOTE: This file is modified from AWS V4 Signer algorithm.
 
 #include "jdcloud_signer/util/DateTime.h"
-#include <time.h>
+#include <ctime>
 #include <cassert>
 #include <iostream>
 #include <cstring>
@@ -200,7 +200,7 @@ tm DateTime::ConvertTimestampToGmtStruct() const
     time_t time = std::chrono::system_clock::to_time_t(m_time);
     struct tm gmtTimeStamp;
 #ifdef WIN32
-    localtime_s(&gmtTimeStamp, &time);
+    gmtime_s(&gmtTimeStamp, &time);
 #else
     gmtime_r(&time, &gmtTimeStamp);
 #endif
