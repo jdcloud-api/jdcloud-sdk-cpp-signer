@@ -12,11 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include(GNUInstallDirs)
-
 set (Demo_VERSION_MAJOR 0)
 set (Demo_VERSION_MINOR 2)
-set (Demo_VERSION_DEBUG 0)
+set (Demo_VERSION_DEBUG 1)
 set(VERSION ${Demo_VERSION_MAJOR}.${Demo_VERSION_MINOR}.${Demo_VERSION_DEBUG})
 set(SOVERSION ${Demo_VERSION_MAJOR})
 
