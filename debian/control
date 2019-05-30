@@ -1,0 +1,29 @@
+Source: jdcloud-sdk-cpp-signer
+Priority: optional
+Maintainer: LI Daobing <lidaobing@debian.org>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Section: libs
+Homepage: https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/jdcloud-sdk-cpp-signer.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/jdcloud-sdk-cpp-signer.git
+
+Package: libjdcloud-signer-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libjdcloud-signer0 (= ${binary:Version}), ${misc:Depends}
+Description: Library for signing openapi request in JD Cloud
+ This library provide signing openapi request in JD Cloud.
+ .
+ This package contains static and debug libraries and header files for
+ developing applications.
+
+Package: libjdcloud-signer0
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library for signing openapi request in JD Cloud
+ This library provide signing openapi request in JD Cloud.
+ .
+ This package contains shared libraries.
