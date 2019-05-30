@@ -1,3 +1,3 @@
 install(DIRECTORY
     jdcloud_signer
-    DESTINATION include)
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
