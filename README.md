@@ -13,17 +13,15 @@ C++ signing library for jdcloud.com
 - [版本 0.1.0 的使用说明](#%E7%89%88%E6%9C%AC-010-%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 - [基本说明](#%E5%9F%BA%E6%9C%AC%E8%AF%B4%E6%98%8E)
 - [安装方法](#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95)
-  - [Linux（Ubuntu）](#linuxubuntu)
+  - [Linux (Ubuntu)](#linux-ubuntu)
   - [MacOS](#macos)
   - [Windows](#windows)
 - [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
-  - [Linux/MacOS](#linuxmacos)
-  - [Windows](#windows-1)
   - [调用方法](#%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95)
 - [FAQ](#faq)
   - [如何使用 openssl 1.1 编译？](#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-openssl-11-%E7%BC%96%E8%AF%91)
-  - [Ubuntu 18.04](#ubuntu-1804)
-  - [MacOS X](#macos-x)
+    - [Ubuntu 18.04](#ubuntu-1804)
+    - [MacOS X](#macos-x)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -44,12 +42,13 @@ C++ signing library for jdcloud.com
 - 然后向京东云OpenAPI网关发起调用
 
 ## 安装方法
-### Linux（Ubuntu）
-1. 安装开发依赖库
+### Linux (Ubuntu)
+
 ```
-sudo apt-get install g++ cmake pkg-config libssl-dev uuid-dev
+sudo add-apt-repository ppa:jdcloud/sdk
+sudo apt-get update
+sudo apt-get install libjdcloud-signer-dev
 ```
-2. 从GitHub下载Demo例子，地址为：https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
 
 ### MacOS
 
@@ -118,7 +117,7 @@ else
 ## FAQ
 ### 如何使用 openssl 1.1 编译？
 
-### Ubuntu 18.04
+#### Ubuntu 18.04
 
 ```
 sudo apt install libssl-dev
@@ -127,7 +126,7 @@ make
 sudo make install
 ```
 
-### MacOS X
+#### MacOS X
 
 ```
 brew install openssl@1.1
