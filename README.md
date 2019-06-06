@@ -1,5 +1,7 @@
 # 京东云 C++ 签名库
 
+C++ signing library for jdcloud.com
+
 [![Build Status](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer.svg?branch=master)](https://travis-ci.org/jdcloud-api/jdcloud-sdk-cpp-signer)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/95b764853f0d4660916c3f1f9a4c5749)](https://app.codacy.com/app/lidaobing/jdcloud-sdk-cpp-signer?utm_source=github.com&utm_medium=referral&utm_content=jdcloud-api/jdcloud-sdk-cpp-signer&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/jdcloud-api/jdcloud-sdk-cpp-signer/badge)](https://www.codefactor.io/repository/github/jdcloud-api/jdcloud-sdk-cpp-signer)
@@ -56,6 +58,9 @@ sudo apt-get install g++ cmake pkg-config libssl-dev uuid-dev
 
 ```sh
 brew tap jdcloud-api/tap
+# 稳定版
+brew install libjdcloud_signer
+# git head 版
 brew install libjdcloud_signer --HEAD
 ```
 
