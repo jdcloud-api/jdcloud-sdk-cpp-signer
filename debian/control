@@ -1,7 +1,7 @@
 Source: jdcloud-sdk-cpp-signer
 Priority: optional
 Maintainer: LI Daobing <lidaobing@debian.org>
-Build-Depends: debhelper (>= 10)
+Build-Depends: debhelper (>= 10), cmake, pkg-config, libssl-dev, uuid-dev
 Standards-Version: 4.1.2
 Section: libs
 Homepage: https://github.com/jdcloud-api/jdcloud-sdk-cpp-signer
