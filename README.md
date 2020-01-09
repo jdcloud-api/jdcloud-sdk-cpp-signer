@@ -50,6 +50,13 @@ sudo apt-get update
 sudo apt-get install libjdcloud-signer-dev
 ```
 
+### Linux (CentOS)
+
+```
+yum install -y openssl-devel libuuid-devel gcc gcc-c++
+make
+make install
+```
 ### MacOS
 
 1. 安装 [homebrew](https://brew.sh/index_zh-cn)
