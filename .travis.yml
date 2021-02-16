@@ -2,12 +2,13 @@ language: cpp
 os:
   - osx
   - linux
+  - windows
 compiler:
   - gcc
   - clang
 script:
-  - cmake --version && pkg-config --version
-  - cmake . && make && make test && sudo make install
+  - cmake --version
+  - cmake . && cmake --build . && make test && sudo make install
   - cd $TRAVIS_BUILD_DIR/examples/makefile && make
   - cd $TRAVIS_BUILD_DIR/examples/cmake && PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig cmake . && make
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew install meson'
